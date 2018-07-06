@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"; 
 import './Css/App.css';
 import General from './Layouts/general';

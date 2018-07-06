@@ -4,6 +4,7 @@ import './Css/App.css';
 import General from './Layouts/general';
 import Header from './Components/Global/header';
 import ScrollToTop from './Components/Global/scrollTop';
+import LandingPage from './Pages/landingPage';
 
 const App = () => (
   <Router> 
@@ -21,8 +22,7 @@ const App = () => (
 
 const Home = () => (
   <div>
-    <h2>Home</h2>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+   <LandingPage />
   </div>
 );
 

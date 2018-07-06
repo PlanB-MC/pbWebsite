@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://planb-mc.github.io/pbWebsite/",
   "dependencies": {
+    "animate.css": "^3.6.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-router": "^4.3.1",

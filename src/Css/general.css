@@ -1,3 +1,11 @@
+/* ============================== */
+/*              FONTS             */
+/* ============================== */
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:700|Raleway|Orbitron|Carter+One|Ubuntu');
+
+/* ============================== */
+/*            PARRALAX            */
+/* ============================== */
 .parrallax {
     background-attachment: fixed;
     background-position: center;

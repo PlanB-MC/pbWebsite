@@ -4,9 +4,19 @@ import { Link } from 'react-router-dom'
 import '../../Css/header.css'
 
 const Header = () => {
-    let navClass = "navbar navbar-expand-md fixed-top scrolled"
+    let navClass = "navbar navbar-expand-md fixed-top"
+    let navId = "homenav"
+
+    if(window.location.pathname !== "/") {
+        navClass = "navbar navbar-expand-md fixed-top scrolled"
+        navId = " "
+    } if(window.location.pathname.includes("maps")) {
+        navClass = "navbar navbar-expand-md scrolled"
+        navId = ""
+    }
+
     return (
-        <nav className={navClass}>
+        <nav className={navClass} id={navId}>
             <div className="container">
                 <Link className="navbar-brand" to="/">PBMC</Link>
                 <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

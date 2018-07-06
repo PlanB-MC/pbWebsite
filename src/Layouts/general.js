@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './general.css'
+import '../Css/general.css'
 
 class general extends Component {
   render() {

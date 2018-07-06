@@ -1,0 +1,79 @@
+/* ==================== */
+/*       Nav Bar        */
+/* ==================== */
+.navbar.navbar-expand-md.fixed-top.scrolled, .navbar.navbar-expand-md.scrolled {
+    background-color: rgba(17, 12, 12, 0.9) !important;
+    transition: background-color 200ms linear;
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.56);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.56);
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.56);
+  }
+.navbar-toggler {
+  border: none;
+  background: transparent !important;
+}
+.navbar-toggler:focus {
+  outline: none;
+  background: transparent !important;
+}
+.navbar-toggler .icon-bar {
+  background-color: #fff; 
+  transform: rotate(0deg) translate(0px, 0px);
+  transition: ease all .2s;
+}
+.navbar-toggler .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+}
+.navbar-toggler .icon-bar+.icon-bar {
+  margin-top: 4px;
+}
+.icon-bar:nth-child(2) {
+  width: 16px;
+  transition: ease all .2s;
+}
+.navbar-toggler:hover>.icon-bar:nth-child(2) {
+  width: 22px;
+  transition: ease all .2s;
+}
+.navbar-toggler:active>.icon-bar:nth-child(2) {
+  width: 22px;
+  transition: ease all .2s;
+}
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 4px);
+  transition: ease all .2s;
+}
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(2) {
+  opacity: 0;
+  transition: ease all .2s;
+}
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+  transition: ease all .2s;
+}
+.nav-item.dropdown-menu a {
+    color: #585858
+}
+.nav-item .dropdown-menu a:hover {
+    background: rgb(228, 228, 228)
+}
+.navbar-nav .nav-item .nav-link, .navbar-brand {
+    text-transform: uppercase;
+    padding: 10px 15px;
+    margin: 10px 0;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(211, 211, 211)
+}
+.navbar-nav .nav-item .nav-link:hover, .navbar-brand:hover {
+    color: #fff
+}
+.navbar-nav .nav-item .nav-link:active {
+    color: crimson
+}
+

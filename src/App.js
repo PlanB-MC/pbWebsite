@@ -2,23 +2,27 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"; 
 import './Css/App.css';
 import General from './Layouts/general';
+import Header from './Components/Global/header';
+import ScrollToTop from './Components/Global/scrollTop';
 
 const App = () => (
-  <Router>
-    <div>
-      <Link to="/">Home</Link> - <Link to="/about">About</Link> - <Link to="/topics">Topics</Link>
-      
-
+  <Router> 
+    <ScrollToTop>  
+      <Header />
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/topics" component={Topics} />
-    </div>
+      <Route path="/t" component={Topics} />
+    </ScrollToTop>
   </Router>
 );
+
+
 
 const Home = () => (
   <div>
     <h2>Home</h2>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   </div>
 );
 

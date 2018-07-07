@@ -24,8 +24,8 @@ class landingPage extends Component {
             <div className="home-cta center p-4">
                 <h4 className="sectHeader joinUs my-2">Recruiting Now!</h4>
                 <p className="text-muted ">Apply today on your chosen site, below</p>
-                <a className="btn applyBtn mcfBtn " href="/"></a>
-                <a className="btn applyBtn redditBtn" href="/"></a>
+                <a className="btn applyBtn mcfBtn " href="https://www.minecraftforum.net/forums/servers-java-edition/pc-servers/2906931-planb-1-13-server-smp-whitelisted-new-world-18"> MCF Application</a>
+                <a className="btn applyBtn redditBtn" href="https://www.reddit.com/user/MC_PlanB">Reddit Application</a>
             </div>
 
             <div className="container">

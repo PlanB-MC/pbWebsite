@@ -114,10 +114,12 @@
     border: 2px solid #444444;
     height: 20vh;
     width: 25vw;
-    margin: 15px 20px
+    margin: 15px 20px;
+    color: transparent; 
   }
 .applyBtn:hover {
-    animation: rubberBand 1.2s
+    animation: rubberBand 1.2s;
+    color: transparent; 
   }
 @keyframes rubberBand {
     from {

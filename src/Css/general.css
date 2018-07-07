@@ -1,7 +1,7 @@
 /* ============================== */
 /*              FONTS             */
 /* ============================== */
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web:700|Raleway|Orbitron|Carter+One|Ubuntu');
+  @import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Titillium+Web:700|Raleway|Orbitron|Carter+One|Ubuntu');
 
 /* ============================== */
 /*            PARRALAX            */
@@ -33,3 +33,11 @@
     border-radius: 15px;
     border: 1px solid #fff;
   }
+/* ============================== */
+/*            HEADERS             */
+/* ============================== */
+.sectHeader {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 3.5vw;
+  font-weight: 800;
+}

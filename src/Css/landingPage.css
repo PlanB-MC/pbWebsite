@@ -98,10 +98,7 @@
     box-shadow: 0px 5px 10px 0px rgba(5, 5, 5, 0.454);
   }
 .joinUs {
-    font-family: 'Titillium Web', sans-serif;
     color: #444444;
-    font-size: 3.5vw;
-    font-weight: 800;
     text-shadow: 1.82px 1.82px rgba(180, 180, 180, 0.626);
   }
 @media (max-width: 576px) { 
@@ -156,4 +153,11 @@
   }
 .redditBtn {
     background-image: url("../Images/reddit.png");
+  }
+/* ============================== */
+/*         SERVER SECTION         */
+/* ============================== */
+.serverSectTitle {
+    color: #d1d1d1;
+    text-shadow: 2.82px 2.82px rgba(0, 0, 0, 0.89);
   }

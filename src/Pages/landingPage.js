@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../Css/landingPage.css'
+import Servers from '../Components/LandingPage/serverCards';
 
 class landingPage extends Component {
   render() {
@@ -21,19 +22,19 @@ class landingPage extends Component {
             </div>
 
             <div className="home-cta center p-4">
-                <h4 className="joinUs my-2">Recruiting Now!</h4>
+                <h4 className="sectHeader joinUs my-2">Recruiting Now!</h4>
                 <p className="text-muted ">Apply today on your chosen site, below</p>
                 <a className="btn applyBtn mcfBtn " href="/"></a>
                 <a className="btn applyBtn redditBtn" href="/"></a>
             </div>
 
-            <section className="">
-                <div className="container">
-                    <div className="srow py-5">
-                        <h1 className="text-light">Servers</h1>            
-                    </div>
+            <div className="container">
+                <div className="py-5">
+                    <h1 className="sectHeader serverSectTitle">Servers</h1>
+                    <Servers />   
                 </div>
-            </section>
+            </div>
+
         </div>
     );
   }

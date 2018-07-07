@@ -1,0 +1,38 @@
+{
+    "survival": {
+        "name": "Survival",
+        "image": "https://api.planb-mc.com/webImages/survival.png",
+        "description": "Placeholder text for the survival server. This text snippet is displayed on both the home page and the server page.",
+        "infoLink": "/server/survival",
+        "joinCommand": "/server survival",
+        "ip": "play.planb-mc.com"
+    },
+
+    "creative": {
+        "name": "Creative",
+        "image": "https://api.planb-mc.com/webImages/creative.png",
+        "description": "Placeholder text for the Creative server. This text snippet is displayed on both the home page and the server page.",
+        "infoLink": "/server/creative",
+        "joinCommand": "/server creative",
+        "ip": "play.planb-mc.com"
+    },
+
+    "sky": {
+        "name": "Sky Block",
+        "image": "https://api.planb-mc.com/webImages/skyblock.png",
+        "description": "Placeholder text for the Sky server. This text snippet is displayed on both the home page and the server page.",
+        "infoLink": "/server/skyblock",
+        "joinCommand": "/server sky",
+        "ip": "play.planb-mc.com"
+    },
+
+    "modded": {
+        "name": "Modded",
+        "image": "https://api.planb-mc.com/webImages/modded.png",
+        "description": "Placeholder text for the modded server. This text snippet is displayed on both the home page and the server page.",
+        "infoLink": "/server/modded",
+        "joinCommand": "",
+        "ip": "modded.planb-mc.com"
+    }
+}
+ 

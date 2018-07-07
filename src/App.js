@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"; 
 import './Css/App.css';
-import General from './Layouts/general';
+import About from './Pages/aboutUs'
 import Header from './Components/Global/header';
 import ScrollToTop from './Components/Global/scrollTop';
 import LandingPage from './Pages/landingPage';
@@ -26,11 +26,7 @@ const Home = () => (
   </div>
 );
 
-const About = () => (
-  <div>
-    <General />
-  </div>
-);
+
 
 const Topics = ({ match }) => (
   <div>

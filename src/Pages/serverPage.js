@@ -145,11 +145,11 @@ class server extends Component {
     }
 
     status = (status) => {
-        if(status === "offline") {
+        if(status) {
             return (
                 <div className="container pt-5">
                     <div className="alert alert-danger">
-                        <strong>Offline!</strong> We are not currently hosting a modpack at this stage. Ask on Discord for furture modpacks.
+                        <strong>{status[0]}</strong> {status[1]}
                     </div>
                 </div>
             )

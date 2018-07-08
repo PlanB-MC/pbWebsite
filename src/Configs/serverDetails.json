@@ -50,6 +50,7 @@
         "name": "Sky Block",
         "subtitle": "Aquatic Season",
         "image": "https://api.planb-mc.com/webImages/skyblock.png",
+        "bgImage": ["https://api.planb-mc.com/webImages/skyblock.png"],
         "desc": "Placeholder text for the Sky server. This text snippet is displayed on both the home page and the server page.",
         "infoLink": "/server/skyblock",
         "joinCommand": "/server sky",
@@ -65,6 +66,12 @@
             "general": ["/is  -  Create a new island or return to your island", "/shop - Takes you to the shop", "/bal - Shows your balance", "/is settings - Change what visitors can do on your island"],
             "coop": ["/island coop <player> - Gives a player temporary full access to your island", "/island expel <player> - Removes coop status. Also ejects player from your island."],
             "team": ["/island invite - Invite a player to join your team. You can only invite one person at a time", "/island accept or reject - Accepts or rejects an invite. If a player has an island already and accepts, the island will be deleted", "/island team - lists info on the team", "/island leave - leave the team - returns to spawn", "/island kick <name> - only available for the island owner or leader - removes a team member", "/island makeleader <name> - Transfers ownership to a team member. Can only be issued by the leader", "/island teamchat - enables players to chat only to team members"]
+        },
+        "tutorials": {
+            "cobblegen": ["http://planb-mc.com/images/acidtut/cobgen.jpg", "Cobble Gen", "Description", "cobblegen"],
+            "chestshops": ["http://planb-mc.com/images/acidtut/shopchest.jpg", "Chest Shops", "Description", "chestshops"],
+            "elevators": ["https://proxy.spigotmc.org/812cd785c8fe48b026e1c7b35539dd1821ba159a?url=http%3A%2F%2Fi.imgur.com%2F6GdihZl.gif", "Elevators", "Description", "elevators"],
+            "shop": ["http://planb-mc.com/images/acidtut/shop.jpg", "Shop", "Description", "shop"]
         }
     },
 

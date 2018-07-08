@@ -1,0 +1,12 @@
+.commandList {
+    list-style-type:none
+  }
+  .commandList i {
+    padding-right: 15px;
+    margin-left: -30px 
+  }
+  .commandMenuBTN {
+    text-transform: capitalize;
+    margin: 5px 5px 20px 5px;
+    padding: 8px 15px;
+  }

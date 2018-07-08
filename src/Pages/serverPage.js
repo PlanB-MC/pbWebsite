@@ -1,5 +1,7 @@
 
 import React, { Component } from 'react';
+import { Link } from "react-router-dom"; 
+import '../Css/serverPage.css'
 import data from '../Configs/serverDetails.json'
 import General from '../Layouts/general'
 import Commands from '../Components/ServerPage/usefulCommands'
@@ -113,7 +115,35 @@ class server extends Component {
         this.setState({ commandMenu: event.target.value }) 
     }
 
-     
+    tuts = (tuts, server) => {
+        if(tuts){
+
+            const tutCard = (keys) => { 
+                return (
+                    <div className="col-md-3" key={keys}>
+                        <div className="card text-center p-1">
+                            <img className="card-img-top" src={tuts[keys][0]} alt={tuts[keys][1]}/>
+                            <div className="card-body p-4">
+                                <h5 className="card-title mb-1">{tuts[keys][1]}</h5>
+                                <p className="card-text mb-3"><small className="text-muted">{tuts[keys][2]}</small></p>
+                                <Link to={"/tutorials/" + server + "/" + tuts[keys][3]} tutii={"hi"} className="btn btn-outline-dark d-block">View </Link>
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
+
+            let keys = Object.keys(tuts)
+            return (
+                <div className="container py-4">
+                    <div className="row">
+                        {keys.map(tutCard)}
+                    </div>
+                </div>
+            )
+        }
+    }
+
     render() {
         const url = window.location.pathname
         let trimedUrl = url.substring(8)
@@ -132,6 +162,7 @@ class server extends Component {
                         box2={this.box2(info.startInfo, info.ip)} 
                         dwnld={this.hasDownloads(info.seasons)}
                         useful={this.usefulCommands(info.commands)}
+                        tuts={this.tuts(info.tutorials, serverName)}
                     />  
                 </div>
             )

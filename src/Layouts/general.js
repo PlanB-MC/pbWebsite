@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Css/general.css'
 
-const general = ({title, sTitle, desc, bgImage, box1, box2, dwnld, useful}) => {
+const general = ({title, sTitle, desc, bgImage, box1, box2, dwnld, useful, tuts}) => {
 
     return (
         <div className="parrallax" style={{ backgroundImage: "url(" + bgImage + ")"}}>
@@ -32,6 +32,7 @@ const general = ({title, sTitle, desc, bgImage, box1, box2, dwnld, useful}) => {
 
             {dwnld}
             {useful}
+            {tuts}
             
         </div>
     </div>

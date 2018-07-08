@@ -7,13 +7,13 @@ const CommandCard = ({ command, menu, menuChange }) => {
 
     const InitMenu = (keys) => {
         return (
-            <button key={keys} className="commandMenuBTN btn btn-outline-light mx-1" onClick={menuChange} value={keys}>{keys}</button>
+            <button key={keys} className="commandMenuBTN btn btn-outline-light" onClick={menuChange} value={keys}>{keys}</button>
         )
     }
 
     const whichMenu = (command) => {
         return (
-           <li key={command} className="my-2">{command}</li>
+           <li key={command} className="my-1">{command}</li>
         )
     }
 

@@ -76,6 +76,7 @@
     },
 
     "modded": {
+        "status": "offline",
         "name": "Modded",
         "subtitle": "Aquatic Season",
         "image": "https://api.planb-mc.com/webImages/modded.png",

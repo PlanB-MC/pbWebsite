@@ -144,6 +144,18 @@ class server extends Component {
         }
     }
 
+    status = (status) => {
+        if(status === "offline") {
+            return (
+                <div className="container pt-5">
+                    <div className="alert alert-danger">
+                        <strong>Offline!</strong> We are not currently hosting a modpack at this stage. Ask on Discord for furture modpacks.
+                    </div>
+                </div>
+            )
+        }
+    }
+
     render() {
         const url = window.location.pathname
         let trimedUrl = url.substring(8)
@@ -163,6 +175,7 @@ class server extends Component {
                         dwnld={this.hasDownloads(info.seasons)}
                         useful={this.usefulCommands(info.commands)}
                         tuts={this.tuts(info.tutorials, serverName)}
+                        status={this.status(info.status)}
                     />  
                 </div>
             )

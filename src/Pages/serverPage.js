@@ -26,9 +26,9 @@ class server extends Component {
         }
     }
 
-    featList = (feats) => {
+    featList = (feats, index) => {
         return (
-            <li>{feats}</li>
+            <li key={index}>{feats}</li>
         )
     }
 
@@ -53,7 +53,6 @@ class server extends Component {
     }
 
     whatImage = (bgImage) => {
-        console.log(bgImage)
         if(bgImage) {
             if(bgImage.length > 1){
                 let numb = Math.floor((Math.random() * bgImage.length) );
@@ -110,6 +109,10 @@ class server extends Component {
         }
     }
 
+    commandMenuChange = (event) => {
+        this.setState({ commandMenu: event.target.value }) 
+    }
+
      
     render() {
         const url = window.location.pathname
@@ -118,7 +121,6 @@ class server extends Component {
         let serverName = trimedUrl.substring(trimedUrl, ((indexSlash < 0) ? 100 : indexSlash))
 
         const info = data[serverName]
-        console.log(info.commands)
         if(info){
             return (
                 <div>

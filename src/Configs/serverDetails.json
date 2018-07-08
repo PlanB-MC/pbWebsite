@@ -1,26 +1,56 @@
 {
     "survival": {
         "name": "Survival",
+        "subtitle": "Aquatic Season",
         "image": "https://api.planb-mc.com/webImages/survival.png",
-        "description": "Placeholder text for the survival server. This text snippet is displayed on both the home page and the server page.",
+        "bgImage": ["https://api.planb-mc.com/webImages/swim1.png", "https://api.planb-mc.com/webImages/swim2.png", "https://api.planb-mc.com/webImages/swim3.png", "https://api.planb-mc.com/webImages/swim4.png", "https://api.planb-mc.com/webImages/swim5.png", "https://api.planb-mc.com/webImages/swim6.png", "https://api.planb-mc.com/webImages/swim7.png"],
+        "desc": "Placeholder text for the survival server. This text snippet is displayed on both the home page and the server page.",
         "infoLink": "/server/survival",
         "joinCommand": "/server survival",
-        "ip": "play.planb-mc.com"
+        "ip": "play.planb-mc.com",
+        "featInfo": [
+            "Plugins & Functions",
+            "Enhancing and Securing Vanilla",
+            "Each season we carefully select plugins and functions, to keep your builds safe and bring a little variety to survival"
+        ],
+        "features": ["Server Goals", "Dynmap", "Vanilla Web Stats", "9000+ Head Shop", "Anti Creeper & Enderman Grief", "1 Player Sleeping", "Grief Protection"],
+        "startInfo": ["Getting Started", "Switching Servers", "Connecting to the network and switching servers is fairly straight forward. Connect to the network using:", "If this is your first time logging in you will default to the survival server. To switch to the other servers, use the following commands:"],
+        "seasons": {
+            "s1": ["Alpha Season", "https://downloads.planb-mc.com/survival-seasons/season1.zip", "http://planb-mc.com/images/season1thumb.jpg", "Our first season based on the border of a desert.", "1.10"],
+            "s2": ["Exploration Season", "https://downloads.planb-mc.com/survival-seasons/season2.zip", "http://planb-mc.com/images/season2thumb.jpg", "The second season with an awesome spawn hub.", "1.11"],
+            "s3": ["Color Season", "https://downloads.planb-mc.com/survival-seasons/season3.zip", "http://planb-mc.com/images/season3thumb.jpg", "Our third season - Lorem ispum placeholder text", "1.12"],
+            "s4": ["Terra Season", "https://downloads.planb-mc.com/survival-seasons/", "http://planb-mc.com/images/season3thumb.jpg", "Epic World Terrain and home to some fantastic builds", "1.12.2"],
+            "s5": ["Aquatic Season","", "http://planb-mc.com/images/season3thumb.jpg", "Current Season for 1.13", "1.13"]
+    }
     },
 
     "creative": {
         "name": "Creative",
+        "subtitle": "Aquatic Season",
         "image": "https://api.planb-mc.com/webImages/creative.png",
-        "description": "Placeholder text for the Creative server. This text snippet is displayed on both the home page and the server page.",
+        "bgImage": ["https://api.planb-mc.com/webImages/creative.png"],
+        "desc": "Placeholder text for the Creative server. This text snippet is displayed on both the home page and the server page.",
         "infoLink": "/server/creative",
         "joinCommand": "/server creative",
-        "ip": "play.planb-mc.com"
+        "ip": "play.planb-mc.com",
+        "featInfo": [
+            "Creative Features",
+            "Enhancing and Securing Vanilla",
+            "Each season we carefully select plugins and functions, to keep your builds safe and bring a little varierty to survival"
+        ],
+        "features": ["99 x 99 Plots", "Access to gamemode and time commands", "Access to full World Edit commands", "Schematic Manager, for easy upload/download of schematics", "Warp system to book mark builds", "Minigames", "9000+ Head Database"],
+        "startInfo": ["Getting Started", "Switching Servers", "Connecting to the network and switching servers is fairly straight forward. Connect to the network using:", "If this is your first time logging in you will default to the survival server. To switch to the other servers, use the following commands:"],
+        "starting": ["DS", "FF"],
+        "commands": {
+            "general": ["/setwarp - Sets a warp location", "/warp - Takes you to the warp location", "/warplist - Shows your warp locations", "/statue create - creates a staue of the playername"]
+        }
     },
 
-    "sky": {
+    "skyblock": {
         "name": "Sky Block",
+        "subtitle": "Aquatic Season",
         "image": "https://api.planb-mc.com/webImages/skyblock.png",
-        "description": "Placeholder text for the Sky server. This text snippet is displayed on both the home page and the server page.",
+        "desc": "Placeholder text for the Sky server. This text snippet is displayed on both the home page and the server page.",
         "infoLink": "/server/skyblock",
         "joinCommand": "/server sky",
         "ip": "play.planb-mc.com"
@@ -28,8 +58,9 @@
 
     "modded": {
         "name": "Modded",
+        "subtitle": "Aquatic Season",
         "image": "https://api.planb-mc.com/webImages/modded.png",
-        "description": "Placeholder text for the modded server. This text snippet is displayed on both the home page and the server page.",
+        "desc": "Placeholder text for the modded server. This text snippet is displayed on both the home page and the server page.",
         "infoLink": "/server/modded",
         "joinCommand": "",
         "ip": "modded.planb-mc.com"

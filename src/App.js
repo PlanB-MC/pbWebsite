@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"; 
 import './Css/App.css';
-import About from './Pages/aboutUs'
 import Header from './Components/Global/header';
 import ScrollToTop from './Components/Global/scrollTop';
 import LandingPage from './Pages/landingPage';
+import About from './Pages/aboutUs'
+import server from './Pages/serverPage'
 
 const App = () => (
   <Router> 
@@ -13,7 +14,7 @@ const App = () => (
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/topics" component={Topics} />
-      <Route path="/t" component={Topics} />
+      <Route path="/server" component={server} />
     </ScrollToTop>
   </Router>
 );

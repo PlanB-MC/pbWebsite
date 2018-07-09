@@ -6,6 +6,7 @@ import ScrollToTop from './Components/Global/scrollTop';
 import LandingPage from './Pages/landingPage';
 import About from './Pages/aboutUs'
 import server from './Pages/serverPage'
+import Member from './Pages/members';
 
 const App = () => (
   <Router> 
@@ -13,6 +14,7 @@ const App = () => (
       <Header />
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
+      <Route path="/members" component={Member} />
       <Route path="/topics" component={Topics} />
       <Route path="/server" component={server} />
     </ScrollToTop>

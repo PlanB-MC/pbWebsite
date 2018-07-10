@@ -7,6 +7,7 @@ import LandingPage from './Pages/landingPage';
 import About from './Pages/aboutUs'
 import server from './Pages/serverPage'
 import Member from './Pages/members';
+import Quests from './Pages/questPage';
 
 const App = () => (
   <Router> 
@@ -15,7 +16,7 @@ const App = () => (
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/members" component={Member} />
-      <Route path="/topics" component={Topics} />
+      <Route path="/quests" component={Quests} />
       <Route path="/server" component={server} />
     </ScrollToTop>
   </Router>

@@ -3,6 +3,19 @@ import '../Css/general.css'
 
 const general = ({title, sTitle, desc, bgImage, box1, box2, dwnld, useful, tuts, status, misc}) => {
 
+    const ifBox = () => {
+        if(box1) {
+            return (
+                <div className="container py-4">
+                <div className="card-deck">
+                    {box1}
+                    {box2}
+                </div>
+            </div>
+            )
+        }
+    }
+    
     return (
         <div className="parrallax" style={{ backgroundImage: "url(" + bgImage + ")"}}>
 
@@ -25,12 +38,7 @@ const general = ({title, sTitle, desc, bgImage, box1, box2, dwnld, useful, tuts,
                 </div>
             </div>
 
-            <div className="container py-4">
-                <div className="card-deck">
-                    {box1}
-                    {box2}
-                </div>
-            </div>
+            {ifBox()}
 
             {dwnld}
             {useful}

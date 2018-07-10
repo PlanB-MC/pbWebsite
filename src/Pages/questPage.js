@@ -42,29 +42,35 @@ class Quests extends Component {
     if(status) {
         return (
             <div className="container pt-5">
-                <div className="alert alert-danger">
-                    <strong><i class="fas fa-lock"></i> {status[0]}</strong> {status[1]}
+                <div className={"alert alert-" + status[0]}>
+                    <strong className="pr-4"><i class={status[1]}></i> {status[2]}</strong> {status[3]}
                 </div>
             </div>
         )
     }
   }
 
-  content = () => {
-    const url = window.location.pathname
-    let trimedUrl = url.substring(8)
-    let indexSlash = trimedUrl.indexOf("/")
-    let questName = trimedUrl.substring(trimedUrl, ((indexSlash < 0) ? 100 : indexSlash))
+  questDesc = () => {
+        return (
+            <div className="row">
+                <div className="col-md-6">
+                    <strong className="pr-4">Aim:</strong>{questData.aim}
+                </div>
+                <div className="col-md-6">
+                    <strong className="pr-4">Reward: </strong>{questData.reward}
+                </div>
+                <div className="col-md-12">
+                    <hr className="bg-white"/>
+                    {questData.desc}
+                </div>
+            </div>
+        )
+  }
 
+  content = () => {
     return (
-        <div className="container">
-        <div className="bg-dark text-light"> 
-            URL: {url}<br/>
-            Trimmed: {trimedUrl} <br/>
-            indexSlash: {indexSlash} <br/>
-            questName: {questName} <br/>
-            questData: {questData[1]}
-        </div>
+        <div className="container py-4">
+            
         </div>
     )
   }
@@ -78,7 +84,7 @@ class Quests extends Component {
             bgImage={questData.bgImage} 
             title={"Survival Quests"}
             sTitle={questData.title}
-            desc={questData.desc}
+            desc={(questData.title === 'Introduction' ? questData.desc : this.questDesc())}
             misc={this.content()}
             status={this.questStatus(questData.status)}
         />

@@ -8,10 +8,11 @@
     "questIntro": {
         "title": "Introduction",
         "subtitle": "New to Season 5",
-        "bgImage": ["https://api.planb-mc.com/webImages/quests/intro.png"],
+        "bgImage": ["https://api.planb-mc.com/webImages/quests/.png"],
         "desc": "This season the quality of life and game changing mechanics will have to be earned by the server. One player sleeping won’t be unlocked until the 10th night has passed or 10 players have slept at the same time. The headshop won’t be unlocked untill the server as a collective has obtained every item in game and once the server has slain a whopping 1000 shulkers it will be awarded with a shulker spawner in the end dimension. And more challenges await this season with exciting rewards!"
     },
     "riseandshine": {
+        "status": ["Locked", "This quest will be unlocked later in the season!"],
         "title": "Rise & Shine",
         "subtitle": "SubTitle",
         "bgImage": ["https://api.planb-mc.com/webImages/quests/rise.png"],

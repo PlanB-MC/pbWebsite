@@ -38,6 +38,18 @@ class Quests extends Component {
     }
   }
 
+  questStatus = (status) => {
+    if(status) {
+        return (
+            <div className="container pt-5">
+                <div className="alert alert-danger">
+                    <strong><i class="fas fa-lock"></i> {status[0]}</strong> {status[1]}
+                </div>
+            </div>
+        )
+    }
+  }
+
   content = () => {
     const url = window.location.pathname
     let trimedUrl = url.substring(8)
@@ -68,6 +80,7 @@ class Quests extends Component {
             sTitle={questData.title}
             desc={questData.desc}
             misc={this.content()}
+            status={this.questStatus(questData.status)}
         />
       )
   }

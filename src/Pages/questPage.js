@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import { apiCall } from "../api";
 import General from '../Layouts/general'
 import pageData from '../Configs/pageData.json'
+import TrophyHunter from '../Components/QuestsPage/trophyHunter';
 
-let questData = []
+let questData = [];
+let questName;
 
 class Quests extends Component {
   constructor(props) {
@@ -29,7 +31,7 @@ class Quests extends Component {
     const url = window.location.pathname
     let trimedUrl = url.substring(8)
     let indexSlash = trimedUrl.indexOf("/")
-    let questName = trimedUrl.substring(trimedUrl, ((indexSlash < 0) ? 100 : indexSlash))
+    questName = trimedUrl.substring(trimedUrl, ((indexSlash < 0) ? 100 : indexSlash))
     
     if(questName === ''){
         questData = pageData['questIntro']
@@ -43,7 +45,7 @@ class Quests extends Component {
         return (
             <div className="container pt-5">
                 <div className={"alert alert-" + status[0]}>
-                    <strong className="pr-4"><i class={status[1]}></i> {status[2]}</strong> {status[3]}
+                    <strong className="pr-4"><i className={status[1]}></i> {status[2]}</strong> {status[3]}
                 </div>
             </div>
         )
@@ -68,11 +70,16 @@ class Quests extends Component {
   }
 
   content = () => {
-    return (
-        <div className="container py-4">
-            
-        </div>
-    )
+      switch (questName) {
+          case 'trophyhunter':
+          return (
+            <TrophyHunter />
+        )
+      
+          default:
+              break;
+      }
+    
   }
 
 
@@ -84,8 +91,8 @@ class Quests extends Component {
             bgImage={questData.bgImage} 
             title={"Survival Quests"}
             sTitle={questData.title}
-            desc={(questData.title === 'Introduction' ? questData.desc : this.questDesc())}
-            misc={this.content()}
+            desc={(questName === '' ? questData.desc : this.questDesc())}
+            misc={this.content(this.whatQuest())}
             status={this.questStatus(questData.status)}
         />
       )

@@ -38,18 +38,18 @@ sort(member)
           const colsize = "col-lg-4 col-md-6"
           if(rankFilter === "All" ){
             return (
-              <Card key={i} title={member[i].name} subTitle={rank} image={"https://visage.surgeplay.com/head/250/" + member[i].uuid} colsize={colsize} />
+              <Card key={i} title={member[i].name} subTitle={rank} image={"https://visage.surgeplay.com/head/150/" + member[i].uuid} colsize={colsize} />
             )
           } else if(rankFilter === "Staff" ) {
             if((staffCheck === "Admin") || (staffCheck === "Developer")){
               return ( 
-                <Card key={i} title={member[i].name} subTitle={rank} image={"https://visage.surgeplay.com/head/250/" + member[i].uuid} colsize={colsize} />
+                <Card key={i} title={member[i].name} subTitle={rank} image={"https://visage.surgeplay.com/head/150/" + member[i].uuid} colsize={colsize} />
               )
             }
           } else {
             if((staffCheck === "Member") ){
               return ( 
-                <Card key={i} title={member[i].name} subTitle={rank} image={"https://visage.surgeplay.com/head/250/" + member[i].uuid} colsize={colsize} />
+                <Card key={i} title={member[i].name} subTitle={rank} image={"https://visage.surgeplay.com/head/150/" + member[i].uuid} colsize={colsize} />
               )
             }
           } return "";

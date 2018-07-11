@@ -11,6 +11,7 @@ import Quests from './Pages/questPage';
 
 const App = () => (
   <Router> 
+  <div>
     <ScrollToTop>  
       <Header />
       <Route exact path="/" component={Home} />
@@ -19,6 +20,7 @@ const App = () => (
       <Route path="/quests" component={Quests} />
       <Route path="/server" component={server} />
     </ScrollToTop>
+    </div>
   </Router>
 );
 

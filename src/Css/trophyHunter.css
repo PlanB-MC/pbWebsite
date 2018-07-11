@@ -1,0 +1,30 @@
+.trophyCard {
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.bPhoto {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: -35px;
+    left: calc(50% - 35px);
+    background: #fff;
+    border-radius: 25%;
+    padding: 10px;
+    border: 1px solid #000
+}
+
+.itemTitle {
+    font-family: 'Permanent Marker', cursive;
+    color: brown;
+    font-size: 20px
+}
+.itemFound {
+    position: absolute;
+    bottom: -16px;
+    width: 100%;
+    border-radius: 0 0 14px 14px;
+    border-top: 1px solid rgb(0, 0, 0);
+
+}

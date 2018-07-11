@@ -32,9 +32,9 @@ const general = ({title, sTitle, desc, bgImage, box1, box2, dwnld, useful, tuts,
         
             <div className="container py-4">
                 <div className="px-5 py-4 bg-dark introBox">
-                    <p className="text-white text-justify m-0">
+                    <div className="text-white text-justify m-0">
                         {desc}
-                    </p>
+                    </div>
                 </div>
             </div>
 

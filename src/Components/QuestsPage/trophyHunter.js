@@ -5,16 +5,18 @@ import { apiCall } from "../../api";
 import '../../Css/trophyHunter.css'
 import SearchBox from './searchBox';
 
+
 class TrophyHunter extends Component {
     constructor(props) {
         super(props)
         this.state = {
-          menuSelected: window.location.pathname.split("/quests/trophyhunter/"),
+          menuSelected: window.location.pathname.slice(21, 100),
           blocks: [],
           searchfield: '',
           selectedOption: 'All',
           searboxSetting: ["Search Blocks and Items", "All", "Found", "Not Found"],
-          sortOrder: 'A -> Z'
+          sortOrder: 'A -> Z',
+          leaders: ''
         }
     }
      
@@ -22,32 +24,52 @@ class TrophyHunter extends Component {
         apiCall("https://api.planb-mc.com/blockConfig.json").then(
           response => this.setState({ blocks: response.blocks, isPending: false })
         )
+        apiCall("https://api.planb-mc.com/blockConfig.json").then(
+          response => this.setState({ leaders: response.players, isPending: false })
+        )
     }
     
-    bCard = (a) => {
-        
-        const item = this.state.blocks[a]
-        const image = 'https://api.planb-mc.com/blocks/' + item.name + '.png'
-
-        if(this.state.selectedOption === "Found") {
-
+    bCard = (bKeys) => {
+        let sOption = (items) => {
+            switch (this.state.selectedOption) {
+                case "Found":
+                    return items.found
+                case "Not Found":
+                    return !items.found
+            
+                default:
+                    return true
+            }
         }
-      
-        return (
-            <div className="col-md-4 my-2">
-                <div className='card text-center my-3 trophyCard h-75'>
-                    <div className="bPhoto"> 
-                        <img alt={item.name} className="img-fluid" src={image} onError={(e)=>{e.target.src="https://api.planb-mc.com/blocks/default-image.jpg"}}/>
-                        
-                    </div>
-                    
-                    <div className="mt-4 mb-5">
-                        <h2 className="itemTitle my-4">{item.name}</h2>
-                    </div>
-                    {this.isFound(item.found, item.player)}
+        
+
+        
+            return (
+                <div className="row pt-5">
+                    { 
+                        bKeys.map((item, i) => {
+                            const items = this.state.blocks[item]
+                            
+                            if(sOption(items) && items.name.toLowerCase().includes(this.state.searchfield.toLowerCase())){
+                                return (
+                                    <div key={i} className="col-md-4 my-2">
+                                        <div className='card text-center my-3 trophyCard h-75'>
+                                            <div className="bPhoto"> 
+                                                <img alt={items.name} className="img-fluid" src={'https://api.planb-mc.com/blocks/' + items.name + '.png'} onError={(e)=>{e.target.src="https://api.planb-mc.com/blocks/default-image.jpg"}}/>
+                                            </div>
+                                            
+                                            <div className="mt-4 mb-5">
+                                                <h2 className="itemTitle my-4">{items.name}</h2>
+                                            </div>
+                                            {this.isFound(items.found, items.player)}
+                                        </div>
+                                    </div>  
+                                )} else return ""
+                        })
+                    }
                 </div>
-            </div>
-        )
+            );
+        
     }
 
     isFound = (found, player) => {
@@ -93,22 +115,38 @@ class TrophyHunter extends Component {
         this.setState({ selectedOption: event.target.value });
       }
 
-      whatPage = (bKeys) => {
-          switch (this.state.menuSelected) {
+      leaderBoard = (leader) => {
+          
+          let lKeys = Object.keys(leader)
+          
+            return (
+                lKeys.map((item, i) => {
+                    let uuid;
+                    apiCall('https://api.mojang.com/users/profiles/minecraft/' + item ).then( response => console.log("response", response))
+                    
+                    return(
+                    <h1>{item} - {leader[item]} /\ {uuid}</h1>
+                    )
+                })
+            )
+      }
+
+      whatPage = (bKeys, state) => {
+          switch (state) {
                 case "blocktracker":
                     return (    
                         <div>
                             <button onClick={this.a2z}>{this.state.sortOrder}</button>
                             <SearchBox searchChange={this.onSearchChange} selectedOption={this.state.selectedOption} radioChange={this.radioChange} settings={this.state.searboxSetting}/>
-                        
-                            <div className="row ">
-                                    {bKeys.map(this.bCard)}
-                            </div>
+                            {this.bCard(bKeys)}
                         </div>
                     )
                 case "leaderboard":
                     return (    
+                        <div className="bg-white p-5">
                         <h1>Leaderboard</h1>
+                        {this.leaderBoard(this.state.leaders)}
+                        </div>
                     )
                 default:
                     return (
@@ -130,10 +168,8 @@ class TrophyHunter extends Component {
                 <Link className="btn btn-outline-warning m-2 px-5 py-2" to={"/quests/trophyhunter/blocktracker"} onClick={() => this.setState({ menuSelected: 'blocktracker'})}>Block Tracker</Link>
                 <Link className="btn btn-outline-warning m-2 px-5 py-2" to={"/quests/trophyhunter/leaderboard"} onClick={() => this.setState({ menuSelected: 'leaderboard'})}>Leaderboard</Link>
             </div>
-            {this.state.selectedOption}
-            {this.whatPage(bKeys)}
-            
-    
+
+            {this.whatPage(bKeys, this.state.menuSelected)}
             
         </div>)
       

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { apiCall } from "../api";
 import General from '../Layouts/general'
+import '../Css/questPage.css'
 import pageData from '../Configs/pageData.json'
 import TrophyHunter from '../Components/QuestsPage/trophyHunter';
 

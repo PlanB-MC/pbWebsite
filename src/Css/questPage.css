@@ -1,0 +1,12 @@
+.hrSubtle {
+    background: rgba(143, 143, 143, 0.411)
+}
+@import url('https://fonts.googleapis.com/css?family=Raleway:700|Righteous');
+.memberTitle {
+    font-family: 'Righteous', cursive;
+    color: brown;
+    font-size: 185%
+}
+.memberSubtitle {
+    font-size: 1.2vw
+}

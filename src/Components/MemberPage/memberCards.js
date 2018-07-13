@@ -9,7 +9,7 @@ const Card = ({ title, subTitle, image, colsize}) => {
           <img alt={title} className="img-fluid" src={image} onError={(e)=>{e.target.src="https://api.planb-mc.com/blocks/default-image.jpg"}}/>
           </div>
           <div>
-            <h2 className="text-danger">{title}</h2>
+            <h2 className="memberTitle">{title}</h2>
             <p className="text-dark">{subTitle}</p>
           </div>
         </div>

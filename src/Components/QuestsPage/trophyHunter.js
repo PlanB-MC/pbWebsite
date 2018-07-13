@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { Link } from "react-router-dom"; 
+import { NavLink } from "react-router-dom"; 
 import { apiCall } from "../../api";
 import '../../Css/trophyHunter.css'
 import SearchBox from './searchBox';
@@ -16,16 +16,17 @@ class TrophyHunter extends Component {
           selectedOption: 'All',
           searboxSetting: ["Search Blocks and Items", "All", "Found", "Not Found"],
           sortOrder: 'A -> Z',
-          leaders: ''
+          leaders: '',
+          blockProg: []
         }
     }
      
     componentDidMount() {
         apiCall("https://api.planb-mc.com/blockConfig.json").then(
-          response => this.setState({ blocks: response.blocks, isPending: false })
+          response => this.setState({ blocks: response.blocks, leaders: response.players, blockProg: [ response.data.blockListSize, response.data.blocksFound, response.data.blockListSize - response.data.blocksFound] })
         )
-        apiCall("https://api.planb-mc.com/blockConfig.json").then(
-          response => this.setState({ leaders: response.players, isPending: false })
+        apiCall("https://api.planb-mc.com/whitelist.json").then(
+        response => this.setState({ member: response, isPending: false })
         )
     }
     
@@ -53,7 +54,7 @@ class TrophyHunter extends Component {
                             if(sOption(items) && items.name.toLowerCase().includes(this.state.searchfield.toLowerCase())){
                                 return (
                                     <div key={i} className="col-md-4 my-2">
-                                        <div className='card text-center my-3 trophyCard h-75'>
+                                        <div className='card text-center my-3 trophyCard h-75 bg-whiteTrans'>
                                             <div className="bPhoto"> 
                                                 <img alt={items.name} className="img-fluid" src={'https://api.planb-mc.com/blocks/' + items.name + '.png'} onError={(e)=>{e.target.src="https://api.planb-mc.com/blocks/default-image.jpg"}}/>
                                             </div>
@@ -102,60 +103,123 @@ class TrophyHunter extends Component {
               return 0;
             });
         }
-      }
+    }
 
-      a2z = () => {
+    a2z = () => {
         (this.state.sortOrder === "A -> Z" ? this.setState({ sortOrder: 'Z -> A'}) : this.setState({ sortOrder: "A -> Z"}) );
-      }
+    }
 
-      onSearchChange = (event) => {
+    onSearchChange = (event) => {
         this.setState({ searchfield: event.target.value })
-      }
-      radioChange = (event) => {
+    }
+    
+    radioChange = (event) => {
         this.setState({ selectedOption: event.target.value });
-      }
+    }
 
-      leaderBoard = (leader) => {
-          
-          let lKeys = Object.keys(leader)
-          
-            return (
-                lKeys.map((item, i) => {
-                    let uuid;
-                    apiCall('https://api.mojang.com/users/profiles/minecraft/' + item ).then( response => console.log("response", response))
-                    
-                    return(
-                    <h1>{item} - {leader[item]} /\ {uuid}</h1>
-                    )
-                })
-            )
-      }
+    getUuid = (arr, searchKey) => {
+        return arr.filter(function(obj) {
+            return Object.keys(obj).some(function(key) {
+            return obj[key].includes(searchKey);
+            })
+        });
+    }
 
-      whatPage = (bKeys, state) => {
-          switch (state) {
-                case "blocktracker":
-                    return (    
-                        <div>
-                            <button onClick={this.a2z}>{this.state.sortOrder}</button>
-                            <SearchBox searchChange={this.onSearchChange} selectedOption={this.state.selectedOption} radioChange={this.radioChange} settings={this.state.searboxSetting}/>
-                            {this.bCard(bKeys)}
+    sortPlayers = (obj) => {
+        // convert object into array
+        let sortable=[];
+        for(let key in obj)
+          if(obj.hasOwnProperty(key))
+            sortable.push([key, obj[key]]); // each item is an array in format [key, value]
+      
+        // sort items by value
+        sortable.sort(function(a, b)
+        {
+          return a[1]<b[1]; // compare numbers
+        });
+        return sortable; // array in format [ [ key1, val1 ], [ key2, val2 ], ... ]
+    };
+        
+
+    leaderBoard = (leader) => {
+        let lKeys = this.sortPlayers(leader)
+        return (
+            lKeys.map((item, i) => {
+                console.log("==ITEM==", item[0])
+                let uuid = this.getUuid(this.state.member, item[0])
+                return(
+                    <div className="col-md-4">
+                        <div className='card text-center my-3 p-3 bg-whiteTrans'>
+                            <div className="photo"> 
+                                <img alt={item} className="img-fluid" src={"https://visage.surgeplay.com/head/250/" + uuid[0].uuid}/>
+                            </div>
+                            <div>
+                                <h2 className="memberTitle">{item[0]}</h2>
+                                <p className="text-dark">Items Found: {item[1]}</p>
+                            </div>
                         </div>
-                    )
-                case "leaderboard":
-                    return (    
-                        <div className="bg-white p-5">
-                        <h1>Leaderboard</h1>
-                        {this.leaderBoard(this.state.leaders)}
+                    </div>
+                )
+            })
+        )
+    }
+
+    whatPage = (bKeys, state, bProg) => {
+        switch (state) {
+            case "blocktracker":
+                return (    
+                    <div>                
+                        {this.bCard(bKeys)}
+                    </div>
+                )
+            case "leaderboard":
+                return (    
+                    <div className="px-4">
+                        <div className="row">
+                            {this.leaderBoard(this.state.leaders)}
                         </div>
-                    )
-                default:
-                    return (
-                        <div>
-                        <h1>Progress</h1>
+                    </div>
+                )
+            default:
+                return (
+                    <div className="row px-4">
+                        <div className="col-md-4">
+                            <div className='card text-center my-3 p-2 bg-whiteTrans'>
+                                <div className="photo"> 
+                                    <img alt="Found Items" className="img-fluid" src={"https://gooperhermetic.com/wp-content/uploads/2017/05/pojo-placeholder-4-1024x768.png"}/>
+                                </div>
+                                <div className="px-3 pt-3">
+                                    <h2 className="memberTitle">Total</h2>
+                                    <p className="text-dark">{bProg[0]}</p>
+                                </div>
+                            </div>
                         </div>
-                    )
-            }
+                        <div className="col-md-4">
+                            <div className='card text-center my-3 p-2 bg-whiteTrans'>
+                                <div className="photo"> 
+                                    <img alt="Found Items" className="img-fluid" src={"https://gooperhermetic.com/wp-content/uploads/2017/05/pojo-placeholder-4-1024x768.png"}/>
+                                </div>
+                                <div className="px-3 pt-3">
+                                    <h2 className="memberTitle">Found</h2>
+                                    <p className="text-dark">{bProg[1]}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <div className='card text-center my-3 p-2 bg-whiteTrans'>
+                                <div className="photo"> 
+                                    <img alt="Found Items" className="img-fluid" src={"https://gooperhermetic.com/wp-content/uploads/2017/05/pojo-placeholder-4-1024x768.png"}/>
+                                </div>
+                                <div className="px-3 pt-3">
+                                    <h2 className="memberTitle">Not Found</h2>
+                                    <p className="text-dark">{bProg[2]}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )
         }
+    }
 
     render() {
         const bKeys = Object.keys(this.state.blocks)
@@ -164,12 +228,19 @@ class TrophyHunter extends Component {
 
         <div className="container">
             <div className="py-2 mb-2 bg-dark introBox text-center">
-                <Link className="btn btn-outline-warning m-2 px-5 py-2" to={"/quests/trophyhunter/progress"} onClick={() => this.setState({ menuSelected: 'progress'})}>Progress</Link>
-                <Link className="btn btn-outline-warning m-2 px-5 py-2" to={"/quests/trophyhunter/blocktracker"} onClick={() => this.setState({ menuSelected: 'blocktracker'})}>Block Tracker</Link>
-                <Link className="btn btn-outline-warning m-2 px-5 py-2" to={"/quests/trophyhunter/leaderboard"} onClick={() => this.setState({ menuSelected: 'leaderboard'})}>Leaderboard</Link>
+                <div className="row">
+                    <div className="col-sm-12">
+                        <NavLink className="btn btn-outline-warning m-2 px-5 py-2 w-25" activeClassName="active" to={"/quests/trophyhunter/progress"} onClick={() => this.setState({ menuSelected: 'progress'})}>Progress</NavLink>
+                        <NavLink className="btn btn-outline-warning m-2 px-5 py-2 w-25" activeClassName="active" to={"/quests/trophyhunter/blocktracker"} onClick={() => this.setState({ menuSelected: 'blocktracker'})}>Block Tracker</NavLink>
+                        <NavLink className="btn btn-outline-warning m-2 px-5 py-2 w-25" activeClassName="active" to={"/quests/trophyhunter/leaderboard"} onClick={() => this.setState({ menuSelected: 'leaderboard'})}>Leaderboard</NavLink>
+                    </div>
+                    <div className="col-sm-12">
+                        {(this.state.menuSelected === "blocktracker") ? <SearchBox searchChange={this.onSearchChange} selectedOption={this.state.selectedOption} radioChange={this.radioChange} settings={this.state.searboxSetting} sortOrder={this.state.sortOrder} a2z={this.a2z}/> : ""}
+                    </div>
+                </div>
             </div>
 
-            {this.whatPage(bKeys, this.state.menuSelected)}
+            {this.whatPage(bKeys, this.state.menuSelected, this.state.blockProg)}
             
         </div>)
       

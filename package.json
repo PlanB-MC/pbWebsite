@@ -2,7 +2,7 @@
   "name": "pbmc-v3",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://planb-mc.github.io/pbWebsite",
+  "homepage": "https://planb-mc.github.io",
   "dependencies": {
     "animate.css": "^3.6.1",
     "react": "^16.4.1",

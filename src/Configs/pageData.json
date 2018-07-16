@@ -14,7 +14,7 @@
         "status": ["warning", "fa fa-spinner fa-spin", "In-Progress", "This quest is awaiting completion!"],
         "title": "Rise & Shine",
         "bgImage": ["https://api.planb-mc.com/webImages/quests/rise.png"],
-        "desc": "Place holder for quest description",
+        "desc": "To learn the secrets of one player sleeping, the community must use its wit and skills to battle the way through the first 10 nights.",
         "aim": "Survive 10 Nights",
         "reward": "One Player Sleeping"
     },
@@ -22,7 +22,7 @@
         "status": ["warning", "fa fa-spinner fa-spin", "In-Progress", "This quest is awaiting completion!"],
         "title": "Trophy Hunter",
         "bgImage": ["https://api.planb-mc.com/webImages/quests/trophy.png"],
-        "desc": "Place holder for quest description",
+        "desc": "Koh the travelling merchant has agreed to sell decorative heads to the community, the catch however is that he wants one of each item and block obtainable in the world.",
         "aim": "Collect every item and block",
         "reward": "Head Shop"
     },
@@ -30,7 +30,7 @@
         "status": ["danger", "fas fa-lock", "Locked", "This quest is currently unavailable! Complete some of the other quests first."],
         "title": "Cure For Madness",
         "bgImage": ["https://api.planb-mc.com/webImages//quests/cure.png"],
-        "desc": "Place holder for quest description",
+        "desc": "Help the mad scientist to research zombie horses, by retriving the organs of 100 horses. He has promised to share the secrest of his research",
         "aim": "Kill 100 Horses",
         "reward": "Zombie Horses"
     },

@@ -7,61 +7,54 @@
     },
     "questIntro": {
         "title": "Introduction",
-        "subtitle": "New to Season 5",
         "bgImage": ["https://api.planb-mc.com/webImages/quests/intro.png"],
-        "desc": "This season the quality of life and game changing mechanics will have to be earned by the server. One player sleeping won’t be unlocked until the 10th night has passed or 10 players have slept at the same time. The headshop won’t be unlocked untill the server as a collective has obtained every item in game and once the server has slain a whopping 1000 shulkers it will be awarded with a shulker spawner in the end dimension. And more challenges await this season with exciting rewards!"
+        "desc": "This season the quality of life and game changing mechanics will have to be earned by the community. One player sleeping won’t be unlocked until the 10th night has passed. The headshop won’t be unlocked until the server as a collective has obtained every item in game and once the server has slain a whopping 1000 shulkers it will be awarded with a shulker spawner in the end dimension. And more challenges await this season with exciting rewards!"
     },
     "riseandshine": {
         "status": ["warning", "fa fa-spinner fa-spin", "In-Progress", "This quest is awaiting completion!"],
         "title": "Rise & Shine",
-        "subtitle": "SubTitle",
         "bgImage": ["https://api.planb-mc.com/webImages/quests/rise.png"],
-        "desc": "This season the quality of life and game changing mechanics will have to be earned by the server. One player sleeping won’t be unlocked until the 10th night has passed or 10 players have slept at the same time. The headshop won’t be unlocked untill the server as a collective has obtained every item in game and once the server has slain a whopping 1000 shulkers it will be awarded with a shulker spawner in the end dimension. And more challenges await this season with exciting rewards!",
-        "aim": "Surviva 10 Nights",
+        "desc": "Place holder for quest description",
+        "aim": "Survive 10 Nights",
         "reward": "One Player Sleeping"
     },
     "trophyhunter": {
         "status": ["warning", "fa fa-spinner fa-spin", "In-Progress", "This quest is awaiting completion!"],
         "title": "Trophy Hunter",
-        "subtitle": "SubTitle",
         "bgImage": ["https://api.planb-mc.com/webImages/quests/trophy.png"],
-        "desc": "This season the quality of life and game changing mechanics will have to be earned by the server. One player sleeping won’t be unlocked until the 10th night has passed or 10 players have slept at the same time. The headshop won’t be unlocked untill the server as a collective has obtained every item in game and once the server has slain a whopping 1000 shulkers it will be awarded with a shulker spawner in the end dimension. And more challenges await this season with exciting rewards!",
+        "desc": "Place holder for quest description",
         "aim": "Collect every item and block",
         "reward": "Head Shop"
     },
     "cureformadness": {
         "status": ["danger", "fas fa-lock", "Locked", "This quest is currently unavailable! Complete some of the other quests first."],
         "title": "Cure For Madness",
-        "subtitle": "SubTitle",
         "bgImage": ["https://api.planb-mc.com/webImages//quests/cure.png"],
-        "desc": "This season the quality of life and game changing mechanics will have to be earned by the server. One player sleeping won’t be unlocked until the 10th night has passed or 10 players have slept at the same time. The headshop won’t be unlocked untill the server as a collective has obtained every item in game and once the server has slain a whopping 1000 shulkers it will be awarded with a shulker spawner in the end dimension. And more challenges await this season with exciting rewards!",
-        "aim": "Kill 100 Horse",
+        "desc": "Place holder for quest description",
+        "aim": "Kill 100 Horses",
         "reward": "Zombie Horses"
     },
     "strikeapose": {
         "status": ["danger", "fas fa-lock", "Locked", "This quest is currently unavailable! Complete some of the other quests first."],
         "title": "Strike A Pose",
-        "subtitle": "SubTitle",
         "bgImage": ["https://api.planb-mc.com/webImages//quests/strike.png"],
-        "desc": "This season the quality of life and game changing mechanics will have to be earned by the server. One player sleeping won’t be unlocked until the 10th night has passed or 10 players have slept at the same time. The headshop won’t be unlocked untill the server as a collective has obtained every item in game and once the server has slain a whopping 1000 shulkers it will be awarded with a shulker spawner in the end dimension. And more challenges await this season with exciting rewards!",
+        "desc": "Place holder for quest description",
         "aim": "Jump 700k Times & Sneak 300 KM",
         "reward": "Posable Armour stands"
     },
     "mimeartist": {
         "status": ["danger", "fas fa-lock", "Locked", "This quest is currently unavailable! Complete some of the other quests first."],
         "title": "Mime Artist",
-        "subtitle": "SubTitle",
         "bgImage": ["https://api.planb-mc.com/webImages//quests/mime.png"],
-        "desc": "This season the quality of life and game changing mechanics will have to be earned by the server. One player sleeping won’t be unlocked until the 10th night has passed or 10 players have slept at the same time. The headshop won’t be unlocked untill the server as a collective has obtained every item in game and once the server has slain a whopping 1000 shulkers it will be awarded with a shulker spawner in the end dimension. And more challenges await this season with exciting rewards!",
-        "aim": "Place 100k Blocks",
+        "desc": "Place holder for quest description",
+        "aim": "Place 100k Glass Blocks",
         "reward": "Barrier Blocks"
     },
     "shulkersanctuary": {
         "status": ["danger", "fas fa-lock", "Locked", "This quest is currently unavailable! Complete some of the other quests first."],
         "title": "Shulker Sanctuary",
-        "subtitle": "SubTitle",
         "bgImage": ["https://api.planb-mc.com/webImages/quests/shulker2.png"],
-        "desc": "This season the quality of life and game changing mechanics will have to be earned by the server. One player sleeping won’t be unlocked until the 10th night has passed or 10 players have slept at the same time. The headshop won’t be unlocked untill the server as a collective has obtained every item in game and once the server has slain a whopping 1000 shulkers it will be awarded with a shulker spawner in the end dimension. And more challenges await this season with exciting rewards!",
+        "desc": "Place holder for quest description",
         "aim": "Kill 1000 Shulkers",
         "reward": "Shulker spawner"
     }

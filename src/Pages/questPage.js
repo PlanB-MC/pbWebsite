@@ -4,6 +4,7 @@ import General from '../Layouts/general'
 import '../Css/questPage.css'
 import pageData from '../Configs/pageData.json'
 import TrophyHunter from '../Components/QuestsPage/trophyHunter';
+import Strike from '../Components/QuestsPage/strike'
 
 let questData = [];
 let questName;
@@ -71,11 +72,15 @@ class Quests extends Component {
   }
 
   content = () => {
-      switch (questName) {
-          case 'trophyhunter':
-          return (
-            <TrophyHunter />
-        )
+    switch (questName) {
+        case 'trophyhunter':
+            return (
+                <TrophyHunter />
+            )
+        case 'strikeapose':
+            return (
+                <Strike />
+            )
       
           default:
               break;

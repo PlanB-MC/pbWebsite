@@ -1,0 +1,19 @@
+.carousel-caption {
+    width: 100%;
+    position: relative;
+    bottom: -10px;
+    left: 0;
+    padding-bottom: 50px
+}
+#carouselExampleIndicators {
+    position: relative;
+}
+.tutsFlex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tutsFlex .flexBox {
+    flex: 1 0 50%;
+    color: #171e42;
+    padding: 10px;
+  }

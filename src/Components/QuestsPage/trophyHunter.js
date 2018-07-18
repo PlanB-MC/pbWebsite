@@ -223,6 +223,8 @@ class TrophyHunter extends Component {
 
     render() {
         const bKeys = Object.keys(this.state.blocks)
+        console.log("bKeys", bKeys)
+        console.log("blocks", this.state.blocks)
         this.sortMe(bKeys, this.state.blocks)
       return (
 

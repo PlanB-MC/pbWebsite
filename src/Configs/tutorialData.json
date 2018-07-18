@@ -1,0 +1,75 @@
+{
+    "skyblock": {
+        "cobblegen": {
+            "name": "CobbleGen",
+            "sub": "Tutorial",
+            "image": "http://planb-mc.com/images/acidtut/cobgen.jpg",
+            "desc": "This guide will teach you how to make a cobblestone generator that you can use when playing skyblock.",
+            "youtube": "https://www.youtube.com/embed/YUhkJZQ5nps",
+            "steps": [
+                ["https://cdn.instructables.com/FSQ/PWC6/IJVRY6V4/FSQPWC6IJVRY6V4.LARGE.jpg?auto=webp&crop=3:2", "Step 1: Dig a Trench", "Dig a Trench that looks like the one shown, you should dig out the blocks marked in red."],
+                ["https://cdn.instructables.com/F9B/W44I/IJVRY6V1/F9BW44IIJVRY6V1.LARGE.jpg?auto=webp&crop=3:2", "Step 2: Add Water", "Add water to the block marked in blue. It should fall into the hole."],
+                ["https://cdn.instructables.com/FUR/ALXS/IJVRY6TV/FURALXSIJVRY6TV.LARGE.jpg?auto=webp&crop=3:2", "Step 3: Add Lava", "Add lava to the far side of the trench, and the water and lava should cool into stone. Once you break the stone, more stone should come back in the exact same spot."],
+                ["https://cdn.instructables.com/FY5/KY9G/IJVRY6TX/FY5KY9GIJVRY6TX.LARGE.jpg?auto=webp&crop=3:2", "Step 4: Mine Away", "Once your cobblestone generator is ready, you can mine away and mine away, and you'll never run out of cobble. Dig yourself a little hole to stand in, and watch as all your skyblock goals are achieved. Enjoy!"]
+            ],
+            "useful": [
+                ["https://test.com", "Test Link"],
+                ["https://test.com/supercob", "Super-Cob"],
+                ["Click Obsidian with a bucket to get lava back!"]
+                
+            ]
+        },
+        "elevators": {
+            "name": "Elevators",
+            "sub": "Tutorial",
+            "image": "http://planb-mc.com/images/acidtut/cobgen.jpg",
+            "desc": "Simple Elevators provides very simple and easy to use elevators. Using Space to go one floor up, and Shift to go one floor down. It's that Simple!",
+            "steps": [
+                ["http://planb-mc.com/images/acidtut/cobgen.jpg", "Block Combos", "You can use any combination of the blocks above"],
+                ["http://planb-mc.com/images/acidtut/cobgen.jpg", "step1", "placeblock"],
+                ["http://planb-mc.com/images/acidtut/cobgen.jpg", "step2", "JUMP"],
+                ["http://planb-mc.com/images/acidtut/greenhouse.jpg", "step3", "abc"]
+            ],
+            "useful": [
+                ["Max Elevator Distance: 40 Blocks"]
+            ]
+        }
+    },
+    "survival": {
+        "cobblehen": {
+            "name": "CobbleGen",
+            "sub": "Tutorial",
+            "image": "http://planb-mc.com/images/acidtut/cobgen.jpg",
+            "desc": "description",
+            "youtube": "youtube"
+        },
+        "elevators": {
+            "name": "Elevators",
+            "sub": "Tutorial",
+            "image": "http://planb-mc.com/images/acidtut/cobgen.jpg",
+            "desc": "description",
+            "youtube": "youtube"
+        }
+    },
+    "notfound": {
+        "id": "notfound",
+        "nameServ": "Unknown Server",
+        "name": "Tutorial Missing",
+        "sub": "Herobrine is to blame!",
+        "image": "https://api.planb-mc.com/webImages/tuts/herobrine.png",
+        "descServ": "Unfortunatly this server does not exsist, maybe one of the following may be of interest",
+        "desc": "Unfortunatly this tutorial can not be found, maybe one of the following may be of interest"
+    },
+    "serverTuts": {
+        "name": "Not Found",
+        "image": "http://planb-mc.com/images/acidtut/cobgen.jpg",
+        "desc": "description"
+    },
+    "allTuts": {
+        "name": "Tutorial Missing",
+        "sub": "Herobrine is to blame!",
+        "image": "http://planb-mc.com/images/acidtut/cobgen.jpg",
+        "desc": "description"
+}
+
+}

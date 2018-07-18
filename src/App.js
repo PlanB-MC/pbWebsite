@@ -8,6 +8,7 @@ import About from './Pages/aboutUs'
 import server from './Pages/serverPage'
 import Member from './Pages/members';
 import Quests from './Pages/questPage';
+import Tutorial from './Pages/tutorialPage';
 
 const App = () => (
   <Router> 
@@ -19,6 +20,7 @@ const App = () => (
       <Route path="/members" component={Member} />
       <Route path="/quests" component={Quests} />
       <Route path="/server" component={server} />
+      <Route path="/tutorials" component={Tutorial} />
     </ScrollToTop>
     </div>
   </Router>

@@ -44,8 +44,14 @@ class Tutorial extends Component {
                 )
             default:
                 let foundStatus = "ok";
-                if(t[serverName]) { (t[serverName][tutName] ? (tut = t[serverName][tutName], foundStatus = "ok") : (tut = t["notfound"], foundStatus = "noTut") )
-                }else { tut = t["notfound"], foundStatus = "noServer" }
+                if(t[serverName]) { 
+                    (t[serverName][tutName] 
+                        ? (tut = t[serverName][tutName], foundStatus = "ok") 
+                        : (tut = t["notfound"], foundStatus = "noTut") 
+                    )
+                }else { 
+                    tut = t["notfound"], foundStatus = "noServer" 
+                }
 
                 return(
                     <TutsLayout

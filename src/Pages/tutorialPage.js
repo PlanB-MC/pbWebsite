@@ -45,12 +45,12 @@ class Tutorial extends Component {
             default:
                 let foundStatus = "ok";
                 if(t[serverName]) { 
-                    (t[serverName][tutName] 
+                    (t[serverName][tutName] !== undefined
                         ? (tut = t[serverName][tutName], foundStatus = "ok") 
                         : (tut = t["notfound"], foundStatus = "noTut") 
                     )
                 }else { 
-                    tut = t["notfound"], foundStatus = "noServer" 
+                    (tut = t["notfound"], foundStatus = "noServer")
                 }
 
                 return(

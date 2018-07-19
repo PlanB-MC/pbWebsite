@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom"; 
 import '../Css/serverPage.css'
 import data from '../Configs/serverDetails.json'
+import tutData from '../Configs/tutorialData.json'
 import General from '../Layouts/general'
 import Commands from '../Components/ServerPage/usefulCommands'
 
@@ -116,24 +117,26 @@ class server extends Component {
     }
 
     tuts = (tuts, server) => {
-        if(tuts){
+        if(tuts[server]){
 
-            const tutCard = (keys) => { 
+            const tutCard = (keys) => {
+                let tData = tuts[server][keys]
                 return (
                     <div className="col-md-3" key={keys}>
                         <div className="card text-center p-1">
-                            <img className="card-img-top" src={tuts[keys][0]} alt={tuts[keys][1]}/>
+                            <img className="card-img-top" src={tData.image} alt={tData.name}/>
                             <div className="card-body p-4">
-                                <h5 className="card-title mb-1">{tuts[keys][1]}</h5>
-                                <p className="card-text mb-3"><small className="text-muted">{tuts[keys][2]}</small></p>
-                                <Link to={"/tutorials/" + server + "/" + tuts[keys][3]} tutii={"hi"} className="btn btn-outline-dark d-block">View </Link>
+                                <h5 className="card-title mb-1">{tData.name}</h5>
+                                <p className="card-text mb-3 text-justify"><small className="text-muted">{tData.desc.substring(0,64)}...</small></p>
+                                <Link to={"/tutorials/" + server + "/" + keys} className="btn btn-outline-dark d-block">View </Link>
                             </div>
                         </div>
                     </div>
                 )
             }
 
-            let keys = Object.keys(tuts)
+            let keys = Object.keys(tuts[server])
+            console.log(keys)
             return (
                 <div className="container py-4">
                     <div className="row">
@@ -174,7 +177,7 @@ class server extends Component {
                         box2={this.box2(info.startInfo, info.ip)} 
                         dwnld={this.hasDownloads(info.seasons)}
                         useful={this.usefulCommands(info.commands)}
-                        tuts={this.tuts(info.tutorials, serverName)}
+                        tuts={this.tuts(tutData, serverName)}
                         status={this.status(info.status)}
                     />  
                 </div>

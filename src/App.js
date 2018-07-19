@@ -9,6 +9,8 @@ import server from './Pages/serverPage'
 import Member from './Pages/members';
 import Quests from './Pages/questPage';
 import Tutorial from './Pages/tutorialPage';
+import Maps from './Pages/mapPage';
+
 
 const App = () => (
   <Router> 
@@ -21,6 +23,7 @@ const App = () => (
       <Route path="/quests" component={Quests} />
       <Route path="/server" component={server} />
       <Route path="/tutorials" component={Tutorial} />
+      <Route path="/maps" component={Maps} />
     </ScrollToTop>
     </div>
   </Router>

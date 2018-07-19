@@ -10,9 +10,6 @@ const Header = () => {
     if(window.location.pathname !== "/") {
         navClass = "navbar navbar-expand-md fixed-top scrolled"
         navId = " "
-    } if(window.location.pathname.includes("maps")) {
-        navClass = "navbar navbar-expand-md scrolled"
-        navId = ""
     }
 
     return (
@@ -41,17 +38,13 @@ const Header = () => {
                             <ul className="dropdown-menu dropdown-menu-right dropdown-danger">
                                 <Link className="dropdown-item" to="/server/survival">Survival</Link>
                                 <Link className="dropdown-item" to="/server/creative">Creative</Link>
-                                <Link className="dropdown-item" to="/server/skyblock">Sky Block</Link>
+                                <Link className="dropdown-item" to="/server/skyisland">Sky Island</Link>
                                 <Link className="dropdown-item" to="/server/modded">Modded</Link>
                             </ul>
                         </div>
 
-                        <div className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false"><i className="fa fa-map-marker"></i> Maps</a>
-                            <ul className="dropdown-menu dropdown-menu-right dropdown-danger">
-                                <Link className="dropdown-item" to="/maps/survival">Survival</Link>
-                                <Link className="dropdown-item" to="/maps/creative">Creative</Link>
-                            </ul>
+                        <div className="nav-item">
+                            <Link className="nav-link" to="/maps"><i className="fa fa-map-marker"></i> Maps</Link>
                         </div>
 
                         <div className="nav-item dropdown">

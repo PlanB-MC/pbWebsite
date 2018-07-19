@@ -26,7 +26,7 @@
 
     "creative": {
         "name": "Creative",
-        "subtitle": "Aquatic Season",
+        "subtitle": "Inspiring Ideas",
         "image": "https://api.planb-mc.com/webImages/creative.png",
         "bgImage": ["https://api.planb-mc.com/webImages/creative.png"],
         "desc": "Creative is a server where thoughts and dreams come to life. If you want to build a house, town, or Kingdom this is the server to get you started. In creative you are given access to all building blocks and items found within the game. What you do and how you use each item is entirely up to you. Flying is just a bonus.",
@@ -35,29 +35,28 @@
         "ip": "play.planb-mc.com",
         "featInfo": [
             "Creative Features",
-            "Enhancing and Securing Vanilla",
-            "Each season we carefully select plugins and functions, to keep your builds safe and bring a little varierty to survival"
+            "Bring your ideas to life!",
+            "This server has been designed to aid bringing your imagination into the world."
         ],
-        "features": ["99 x 99 Plots", "Access to gamemode and time commands", "Access to full World Edit commands", "Schematic Manager, for easy upload/download of schematics", "Warp system to book mark builds", "Minigames", "9000+ Head Database"],
+        "features": ["99 x 99 Plots", "Access to gamemodes and time commands", "World Edit commands", "Schematic Manager, for easy upload/download of schematics", "Warp system to book mark builds", "Minigames", "9000+ Head Database"],
         "startInfo": ["Getting Started", "Switching Servers", "Connecting to the network and switching servers is fairly straight forward. Connect to the network using:", "If this is your first time logging in you will default to the survival server. To switch to the other servers, use the following commands:"],
-        "starting": ["DS", "FF"],
         "commands": {
             "general": ["/setwarp - Sets a warp location", "/warp - Takes you to the warp location", "/warplist - Shows your warp locations", "/statue create - creates a staue of the playername"]
         }
     },
 
-    "skyblock": {
-        "name": "Sky Block",
-        "subtitle": "Aquatic Season",
+    "skyisland": {
+        "name": "Sky Island",
+        "subtitle": "Reach for the sky",
         "image": "https://api.planb-mc.com/webImages/skyblock.png",
         "bgImage": ["https://api.planb-mc.com/webImages/skyblock.png"],
         "desc": "Sky Islands is a survival challenge, living on a small and basic floating island. Your objective is to survive and thrive, expanding your island, growing your own food. Including leaderboards for island level and player net worth, challenges and more. Do you have what it takes to become the Islander Champion?",
-        "infoLink": "/server/skyblock",
+        "infoLink": "/server/skyisland",
         "joinCommand": "/server sky",
         "ip": "play.planb-mc.com",
         "featInfo": [
-            "Sky-Island Features",
-            "Subtitle here",
+            "Sky-Island",
+            "Features",
             "You find yourself marooned on an island in the sky with just a cow and a chest of strange items. Don't fall! Moo!"
         ],
         "features": ["Challenges", "In-game Shop", "HeadShop", "Magic CobbleGen", "Elevators", "Builders Wand", "Large Island Plots", "Multiple-Choice Starter islands"],

@@ -1,10 +1,10 @@
 {
-    "skyblock": {
+    "skyisland": {
         "cobblegen": {
             "name": "CobbleGen",
             "sub": "Tutorial",
             "image": "http://planb-mc.com/images/acidtut/cobgen.jpg",
-            "desc": "This guide will teach you how to make a cobblestone generator that you can use when playing skyblock.",
+            "desc": "This guide will teach you how to make a cobble stone generator that you can use when playing skyblock.",
             "youtube": "https://www.youtube.com/embed/YUhkJZQ5nps",
             "steps": [
                 ["https://cdn.instructables.com/FSQ/PWC6/IJVRY6V4/FSQPWC6IJVRY6V4.LARGE.jpg?auto=webp&crop=3:2", "Step 1: Dig a Trench", "Dig a Trench that looks like the one shown, you should dig out the blocks marked in red."],
@@ -35,19 +35,12 @@
             ]
         }
     },
-    "survival": {
-        "cobblehen": {
-            "name": "CobbleGen",
+    "creative": {
+        "worldedit": {
+            "name": "Word Edit",
             "sub": "Tutorial",
             "image": "http://planb-mc.com/images/acidtut/cobgen.jpg",
-            "desc": "description",
-            "youtube": "youtube"
-        },
-        "elevators": {
-            "name": "Elevators",
-            "sub": "Tutorial",
-            "image": "http://planb-mc.com/images/acidtut/cobgen.jpg",
-            "desc": "description",
+            "desc": "This guide will teach you the basics of world edit",
             "youtube": "youtube"
         }
     },

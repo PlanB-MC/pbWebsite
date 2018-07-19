@@ -1,10 +1,7 @@
 
 import React, { Component } from 'react';
-import { NavLink } from "react-router-dom"; 
 import { apiCall } from "../../api";
 import '../../Css/trophyHunter.css'
-import SearchBox from './searchBox';
-
 
 class Strike extends Component {
     constructor(props) {

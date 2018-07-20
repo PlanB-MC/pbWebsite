@@ -10,3 +10,12 @@
     margin: 5px 5px 20px 5px;
     padding: 8px 15px;
   }
+
+  .subHeading {
+    background: rgba(58, 56, 56, 0.8);
+    width: 100%;
+    margin: auto;
+    border-top: 2px solid rgba(255, 255, 255,0.95);
+    border-bottom: 2px solid rgba(255, 255, 255,0.95);
+    border-radius: 50px
+  }

@@ -73,13 +73,13 @@ class server extends Component {
             const downloadCard = (download, index) => {
                 const dItem = downloads[download]
                 return (
-                    <div className="col-md-6" key={index}>
+                    <div className="col-lg-4 col-md-6 d-flex align-items-stretch" key={index}>
                         <div className="card text-center p-2 my-3">
                             <img className="card-img-top img-fluid rounded" src={dItem[2]} alt={dItem[0]}/>
                             <div className="card-body px-4 pt-3">
                                 <h3 className="card-title mb-2 serverCardTitle">{dItem[0]}</h3>
-                                <p className="card-text mb-4 text-muted sCardSubtitle">{dItem[3]}</p>
-                                <a href={dItem[1]} className="btn btn-outline-dark d-block">Download</a>
+                                <p className="card-text mb-5 text-muted sCardSubtitle">{dItem[3]}</p>
+                                <a href={dItem[1]} className="btn btn-outline-dark d-block dwnload">Download</a>
                             </div>
                         </div>
                     </div>
@@ -88,10 +88,13 @@ class server extends Component {
 
             return (
                 <div className="container">
-                    <div className="py-5">
-                        <h2 className="animated bounce text-light">Map Downloads</h2>
+                    <div className="py-4">
+                    <div className="subHeading py-3">
+                    <h1 className="text-center text-danger">Seasons</h1>
+                    
+                </div>
                         <div className="row">
-                            {dwlKeys.map(downloadCard)}
+                                {dwlKeys.map(downloadCard)}
                         </div>
                     </div>
                 </div>

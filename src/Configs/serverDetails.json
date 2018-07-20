@@ -16,11 +16,11 @@
         "features": ["Server Goals", "Dynmap", "Vanilla Web Stats", "9000+ Head Shop", "Anti Creeper & Enderman Grief", "1 Player Sleeping", "Grief Protection"],
         "startInfo": ["Getting Started", "Switching Servers", "Connecting to the network and switching servers is fairly straight forward. Connect to the network using:", "If this is your first time logging in you will default to the survival server. To switch to the other servers, use the following commands:"],
         "seasons": {
-            "s1": ["Alpha Season", "https://downloads.planb-mc.com/survival-seasons/season1.zip", "http://planb-mc.com/images/season1thumb.jpg", "Our first season based on the border of a desert.", "1.10"],
-            "s2": ["Exploration Season", "https://downloads.planb-mc.com/survival-seasons/season2.zip", "http://planb-mc.com/images/season2thumb.jpg", "The second season with an awesome spawn hub.", "1.11"],
-            "s3": ["Color Season", "https://downloads.planb-mc.com/survival-seasons/season3.zip", "http://planb-mc.com/images/season3thumb.jpg", "Our third season - Lorem ispum placeholder text", "1.12"],
-            "s4": ["Terra Season", "https://downloads.planb-mc.com/survival-seasons/", "http://planb-mc.com/images/season3thumb.jpg", "Epic World Terrain and home to some fantastic builds", "1.12.2"],
-            "s5": ["Aquatic Season","", "http://planb-mc.com/images/season3thumb.jpg", "Current Season for 1.13", "1.13"]
+            "s1": ["Alpha", "https://downloads.planb-mc.com/survival-seasons/season1.zip", "https://api.planb-mc.com/webImages/serverPage/s1.png", "Season 1 was based in the desert, featuring a quaint spawn village and a colosseum.", "1.10"],
+            "s2": ["Exploration", "https://downloads.planb-mc.com/survival-seasons/season2.zip", "https://api.planb-mc.com/webImages/serverPage/s2.png", "Season 2 utilised districts for builds. Featuring the first PlanB spawn hub!", "1.11"],
+            "s3": ["Color", "https://downloads.planb-mc.com/survival-seasons/season3.zip", "https://api.planb-mc.com/webImages/serverPage/s3.png", "Season 3 featured some awesome build, including an elytra course, crater and more.", "1.12"],
+            "s4": ["Terra", "https://downloads.planb-mc.com/survival-seasons/", "https://api.planb-mc.com/webImages/serverPage/s4.png", "Season 4 was an Epic season, boasting some amazing  terrain and massive projects", "1.12.2"],
+            "s5": ["Aquatic","", "https://api.planb-mc.com/webImages/serverPage/s5.png", "Current Season for 1.13", "1.13"]
     }
     },
 

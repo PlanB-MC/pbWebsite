@@ -2,7 +2,8 @@
   "name": "pbmc-v3",
   "version": "0.1.0",
   "private": true,
-  "main": "app.js",
+  "homepage": "https://newweb.planb-mc.com",
+  "main": "index.js",
   "dependencies": {
     "animate.css": "^3.6.1",
     "react": "^16.4.1",

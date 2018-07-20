@@ -1,51 +1,32 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom"; 
+import './Css/App.css';
+import Header from './Components/Global/header';
+import ScrollToTop from './Components/Global/scrollTop';
+import LandingPage from './Pages/landingPage';
+import About from './Pages/aboutUs'
+import server from './Pages/serverPage'
+import Member from './Pages/members';
+import Quests from './Pages/questPage';
+import Tutorial from './Pages/tutorialPage';
+import Maps from './Pages/mapPage';
 
-const ParamsExample = () => (
-  <Router>
-    <div>
-      <h2>Accounts</h2>
-      <ul>
-        <li>
-          <Link to="/netflix">Netflix</Link>
-        </li>
-        <li>
-          <Link to="/zillow-group">Zillow Group</Link>
-        </li>
-        <li>
-          <Link to="/yahoo">Yahoo</Link>
-        </li>
-        <li>
-          <Link to="/modus-create">Modus Create</Link>
-        </li>
-      </ul>
 
-      <Route path="/:id" component={Child} />
-
-      {/*
-         It's possible to use regular expressions to control what param values should be matched.
-            * "/order/asc"  - matched
-            * "/order/desc" - matched
-            * "/order/foo"  - not matched
-      */}
-      <Route
-        path="/order/:direction(asc|desc)"
-        component={ComponentWithRegex}
-      />
-    </div>
+const App = () => (
+  <Router> 
+      <ScrollToTop>  
+        <Header />
+        <Route exact path="/" component={LandingPage} />
+        <Route path="/about" component={About} />
+        <Route path="/members" component={Member} />
+        <Route path="/quests" component={Quests} />
+        <Route path="/server" component={server} />
+        <Route path="/tutorials" component={Tutorial} />
+        <Route path="/maps" component={Maps} />
+      </ScrollToTop>
   </Router>
 );
 
-const Child = ({ match }) => (
-  <div>
-    <h3>ID: {match.params.id}</h3>
-  </div>
-);
 
-const ComponentWithRegex = ({ match }) => (
-  <div>
-    <h3>Only asc/desc are allowed: {match.params.direction}</h3>
-  </div>
-);
 
-export default ParamsExample;
+export default App;

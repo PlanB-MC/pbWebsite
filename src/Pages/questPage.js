@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { apiCall } from "../api";
 import General from '../Layouts/general'
 import '../Css/questPage.css'
-import pageData from '../Configs/pageData.json'
+import pageData from '../Configs/questData.json'
 import TrophyHunter from '../Components/QuestsPage/trophyHunter';
 import Strike from '../Components/QuestsPage/strike'
+import QuestIntro from '../Components/QuestsPage/questIntro';
 
 let questData = [];
 let questName;
@@ -13,12 +14,6 @@ class Quests extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      pageData: [""],
-      searchfield: '',
-      selectedOption: 'All',
-      searboxSetting: ["Search Players", "All", "Members", "Staff"],
-      admin: ["Mattchow", "Zerolarity", "Xantev", "BrizzleMFD", "Mystic_Nick"],
-      dev: ["Valicious15"]
     }
   }
   
@@ -80,6 +75,19 @@ class Quests extends Component {
         case 'strikeapose':
             return (
                 <Strike />
+            )
+        case '':
+            let qKeys = Object.keys(pageData)
+            return (
+                <div className="container-fluid">
+                    <div className="row px-4">
+                        <div className="card-deck">
+                            {qKeys.map(a =>
+                                (a !== 'questIntro' ? <QuestIntro a={a} pageData={pageData} /> : null )  
+                            )}
+                        </div>
+                    </div>
+                </div>
             )
       
           default:

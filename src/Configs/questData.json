@@ -1,0 +1,56 @@
+{
+    "questIntro": {
+        "title": "Introduction",
+        "bgImage": ["https://api.planb-mc.com/webImages/quests/intro.png"],
+        "desc": "This season the quality of life and game changing mechanics will have to be earned by the community. One player sleeping won’t be unlocked until the 10th night has passed. The headshop won’t be unlocked until the server as a collective has obtained every item in game and once the server has slain a whopping 1000 shulkers it will be awarded with a shulker spawner in the end dimension. And more challenges await this season with exciting rewards!"
+    },
+    "riseandshine": {
+        "status": ["warning", "fa fa-spinner fa-spin", "In-Progress", "This quest is awaiting completion!"],
+        "title": "Rise & Shine",
+        "bgImage": ["https://api.planb-mc.com/webImages/quests/rise.png"],
+        "desc": "To learn the secrets of one player sleeping, the community must use its wit and skills to battle the way through the first 10 nights.",
+        "aim": "Survive 10 Nights",
+        "reward": "One Player Sleeping"
+    },
+    "trophyhunter": {
+        "status": ["warning", "fa fa-spinner fa-spin", "In-Progress", "This quest is awaiting completion!"],
+        "title": "Trophy Hunter",
+        "bgImage": ["https://api.planb-mc.com/webImages/quests/trophy.png"],
+        "desc": "Koh the travelling merchant has agreed to sell decorative heads to the community, the catch however is that he wants one of each item and block obtainable in the world.",
+        "aim": "Collect every item and block",
+        "reward": "Head Shop"
+    },
+    "cureformadness": {
+        "status": ["danger", "fas fa-lock", "Locked", "This quest is currently unavailable! Complete some of the other quests first."],
+        "title": "Cure For Madness",
+        "bgImage": ["https://api.planb-mc.com/webImages//quests/cure.png"],
+        "desc": "Help the mad scientist to research zombie horses, by retriving the organs of 100 horses. He has promised to share the secrest of his research",
+        "aim": "Kill 100 Horses",
+        "reward": "Zombie Horses"
+    },
+    "strikeapose": {
+        "status": ["danger", "fas fa-lock", "Locked", "This quest is currently unavailable! Complete some of the other quests first."],
+        "title": "Strike A Pose",
+        "bgImage": ["https://api.planb-mc.com/webImages//quests/strike.png"],
+        "desc": "Place holder for quest description",
+        "aim": "Jump 700k Times & Sneak 300 KM",
+        "reward": "Posable Armour stands"
+    },
+    "mimeartist": {
+        "status": ["danger", "fas fa-lock", "Locked", "This quest is currently unavailable! Complete some of the other quests first."],
+        "title": "Mime Artist",
+        "bgImage": ["https://api.planb-mc.com/webImages//quests/mime.png"],
+        "desc": "Place holder for quest description",
+        "aim": "Place 100k Glass Blocks",
+        "reward": "Barrier Blocks"
+    },
+    "shulkersanctuary": {
+        "status": ["danger", "fas fa-lock", "Locked", "This quest is currently unavailable! Complete some of the other quests first."],
+        "title": "Shulker Sanctuary",
+        "bgImage": ["https://api.planb-mc.com/webImages/quests/shulker2.png"],
+        "desc": "Place holder for quest description",
+        "aim": "Kill 1000 Shulkers",
+        "reward": "Shulker spawner"
+    }
+}
+ 

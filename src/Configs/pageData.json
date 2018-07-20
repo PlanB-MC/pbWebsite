@@ -4,59 +4,6 @@
         "subtitle": "- H.P. Lovecraft",
         "bgImage": ["https://api.planb-mc.com/webImages/about1.png", "https://api.planb-mc.com/webImages/about2.png", "https://api.planb-mc.com/webImages/about3.png", "https://api.planb-mc.com/webImages/about4.png"],
         "desc": "...And so may great Minecraft servers, it seems. A couple of years ago, Lovecraft, a vanilla Minecraft community, disappeared into the void together with its owner. We, a dedicated group of players and friends that played on it, have no clue where it went, but it left us without a home. We decided to not let that setback get to us and to continue its legacy in the form of a new server, where we could continue to express our creativity and unleash our wildest ideas. We decided it was time for a PlanB Now 3 maps later we are standing at the gateway of the aquatic update and are looking for new players (Aged 18+) to join us in our exploration of these unknown waters on a brand new map for season 5! We will be resetting on the full spigot release of update aquatic. Until then you can enjoy our 1.12.2 world."
-    },
-    "questIntro": {
-        "title": "Introduction",
-        "bgImage": ["https://api.planb-mc.com/webImages/quests/intro.png"],
-        "desc": "This season the quality of life and game changing mechanics will have to be earned by the community. One player sleeping won’t be unlocked until the 10th night has passed. The headshop won’t be unlocked until the server as a collective has obtained every item in game and once the server has slain a whopping 1000 shulkers it will be awarded with a shulker spawner in the end dimension. And more challenges await this season with exciting rewards!"
-    },
-    "riseandshine": {
-        "status": ["warning", "fa fa-spinner fa-spin", "In-Progress", "This quest is awaiting completion!"],
-        "title": "Rise & Shine",
-        "bgImage": ["https://api.planb-mc.com/webImages/quests/rise.png"],
-        "desc": "To learn the secrets of one player sleeping, the community must use its wit and skills to battle the way through the first 10 nights.",
-        "aim": "Survive 10 Nights",
-        "reward": "One Player Sleeping"
-    },
-    "trophyhunter": {
-        "status": ["warning", "fa fa-spinner fa-spin", "In-Progress", "This quest is awaiting completion!"],
-        "title": "Trophy Hunter",
-        "bgImage": ["https://api.planb-mc.com/webImages/quests/trophy.png"],
-        "desc": "Koh the travelling merchant has agreed to sell decorative heads to the community, the catch however is that he wants one of each item and block obtainable in the world.",
-        "aim": "Collect every item and block",
-        "reward": "Head Shop"
-    },
-    "cureformadness": {
-        "status": ["danger", "fas fa-lock", "Locked", "This quest is currently unavailable! Complete some of the other quests first."],
-        "title": "Cure For Madness",
-        "bgImage": ["https://api.planb-mc.com/webImages//quests/cure.png"],
-        "desc": "Help the mad scientist to research zombie horses, by retriving the organs of 100 horses. He has promised to share the secrest of his research",
-        "aim": "Kill 100 Horses",
-        "reward": "Zombie Horses"
-    },
-    "strikeapose": {
-        "status": ["danger", "fas fa-lock", "Locked", "This quest is currently unavailable! Complete some of the other quests first."],
-        "title": "Strike A Pose",
-        "bgImage": ["https://api.planb-mc.com/webImages//quests/strike.png"],
-        "desc": "Place holder for quest description",
-        "aim": "Jump 700k Times & Sneak 300 KM",
-        "reward": "Posable Armour stands"
-    },
-    "mimeartist": {
-        "status": ["danger", "fas fa-lock", "Locked", "This quest is currently unavailable! Complete some of the other quests first."],
-        "title": "Mime Artist",
-        "bgImage": ["https://api.planb-mc.com/webImages//quests/mime.png"],
-        "desc": "Place holder for quest description",
-        "aim": "Place 100k Glass Blocks",
-        "reward": "Barrier Blocks"
-    },
-    "shulkersanctuary": {
-        "status": ["danger", "fas fa-lock", "Locked", "This quest is currently unavailable! Complete some of the other quests first."],
-        "title": "Shulker Sanctuary",
-        "bgImage": ["https://api.planb-mc.com/webImages/quests/shulker2.png"],
-        "desc": "Place holder for quest description",
-        "aim": "Kill 1000 Shulkers",
-        "reward": "Shulker spawner"
     }
 }
  

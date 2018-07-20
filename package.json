@@ -2,7 +2,6 @@
   "name": "pbmc-v3",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/",
   "main": "app.js",
   "dependencies": {
     "animate.css": "^3.6.1",

@@ -186,7 +186,7 @@ class TrophyHunter extends Component {
                         <div className="col-md-4">
                             <div className='card text-center my-3 p-2 bg-whiteTrans'>
                                 <div className="photo"> 
-                                    <img alt="Found Items" className="img-fluid" src={"https://gooperhermetic.com/wp-content/uploads/2017/05/pojo-placeholder-4-1024x768.png"}/>
+                                    <img alt="Total Items" className="img-fluid" src={"https://api.planb-mc.com/webImages/quests/th/blocksTotal.png"}/>
                                 </div>
                                 <div className="px-3 pt-3">
                                     <h2 className="memberTitle">Total</h2>
@@ -197,7 +197,7 @@ class TrophyHunter extends Component {
                         <div className="col-md-4">
                             <div className='card text-center my-3 p-2 bg-whiteTrans'>
                                 <div className="photo"> 
-                                    <img alt="Found Items" className="img-fluid" src={"https://gooperhermetic.com/wp-content/uploads/2017/05/pojo-placeholder-4-1024x768.png"}/>
+                                    <img alt="Found Items" className="img-fluid" src={"https://api.planb-mc.com/webImages/quests/th/blocksFound.png"}/>
                                 </div>
                                 <div className="px-3 pt-3">
                                     <h2 className="memberTitle">Found</h2>
@@ -208,7 +208,7 @@ class TrophyHunter extends Component {
                         <div className="col-md-4">
                             <div className='card text-center my-3 p-2 bg-whiteTrans'>
                                 <div className="photo"> 
-                                    <img alt="Found Items" className="img-fluid" src={"https://gooperhermetic.com/wp-content/uploads/2017/05/pojo-placeholder-4-1024x768.png"}/>
+                                    <img alt="Needed Items" className="img-fluid" src={"https://api.planb-mc.com/webImages/quests/th/blocksNeeded.png"}/>
                                 </div>
                                 <div className="px-3 pt-3">
                                     <h2 className="memberTitle">Not Found</h2>

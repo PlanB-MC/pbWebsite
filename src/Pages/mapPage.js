@@ -8,11 +8,11 @@ const listMaps = () => {
   return(
     mKeys.map(a => 
       <div className="col-md-4" key={a}>
-        <div className='card text-center my-3 p-2'>
+        <div className='card text-center my-1 p-2'>
             <div className="photo"> 
                 <img alt={data[a].name} className="img-fluid" src={data[a].image}/>
             </div>
-            <div className="px-3 pt-3">
+            <div className="px-3 pt-1">
                 <h2 className="memberTitle">{data[a].title}</h2>
                 <a href={"https://map.planb-mc.com/" + a} className="btn btn-outline-dark d-block my-4" target="_blank">{data[a].textLink}</a>
             </div>
@@ -22,30 +22,17 @@ const listMaps = () => {
   )
 }
 
-const Maps = ({location}) => {
-  console.log(location)
+const Maps = () => {
   return (
     <div className="map parrallax" style={{ backgroundImage: "url(https://api.planb-mc.com/webImages/map.png)"}}>
-
-
-        <div className="map transp pt-5"> 
-
-        
-            
-
+        <div className="map transp py-5"> 
             <div className="container-fluid mt-5">
-                <div className="row px-4">
+                <div className="row px-5">
 
                 {listMaps()}
 
-                    
-
-                    
-                    
                 </div>  
             </div>
-
-            
         </div>
     </div>
   );

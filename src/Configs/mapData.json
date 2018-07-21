@@ -1,17 +1,17 @@
 {
     "survival": {
         "title": "Survival",
-        "image": "https://gooperhermetic.com/wp-content/uploads/2017/05/pojo-placeholder-4-1024x768.png",
+        "image": "https://api.planb-mc.com/webImages/maps/sMap.png",
         "textLink": "View Map"
     },
     "creative": {
         "title": "Creative",
-        "image": "https://gooperhermetic.com/wp-content/uploads/2017/05/pojo-placeholder-4-1024x768.png",
+        "image": "https://api.planb-mc.com/webImages/maps/cMap.png",
         "textLink": "View Map"
     },
     "sky": {
         "title": "Sky Islands",
-        "image": "https://gooperhermetic.com/wp-content/uploads/2017/05/pojo-placeholder-4-1024x768.png",
+        "image": "https://api.planb-mc.com/webImages/maps/skyMap.png",
         "textLink": "View Map"
     }
 }

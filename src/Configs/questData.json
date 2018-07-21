@@ -21,7 +21,7 @@
         "reward": "Head Shop"
     },
     "cureformadness": {
-        "status": ["danger", "fas fa-lock", "Locked", "This quest is currently unavailable! Complete some of the other quests first."],
+        "status": ["warning", "fa fa-spinner fa-spin", "In-Progress", "This quest is awaiting completion!"],
         "title": "Cure For Madness",
         "bgImage": ["https://api.planb-mc.com/webImages//quests/cure.png"],
         "desc": "Help the mad scientist to research zombie horses, by retriving the organs of 100 horses. He has promised to share the secrest of his research",
@@ -29,7 +29,7 @@
         "reward": "Zombie Horses"
     },
     "strikeapose": {
-        "status": ["danger", "fas fa-lock", "Locked", "This quest is currently unavailable! Complete some of the other quests first."],
+        "status": ["warning", "fa fa-spinner fa-spin", "In-Progress", "This quest is awaiting completion!"],
         "title": "Strike A Pose",
         "bgImage": ["https://api.planb-mc.com/webImages//quests/strike.png"],
         "desc": "Place holder for quest description",
@@ -37,7 +37,7 @@
         "reward": "Posable Armour stands"
     },
     "mimeartist": {
-        "status": ["danger", "fas fa-lock", "Locked", "This quest is currently unavailable! Complete some of the other quests first."],
+        "status": ["warning", "fa fa-spinner fa-spin", "In-Progress", "This quest is awaiting completion!"],
         "title": "Mime Artist",
         "bgImage": ["https://api.planb-mc.com/webImages//quests/mime.png"],
         "desc": "Place holder for quest description",
@@ -45,7 +45,7 @@
         "reward": "Barrier Blocks"
     },
     "shulkersanctuary": {
-        "status": ["danger", "fas fa-lock", "Locked", "This quest is currently unavailable! Complete some of the other quests first."],
+        "status": ["warning", "fa fa-spinner fa-spin", "In-Progress", "This quest is awaiting completion!"],
         "title": "Shulker Sanctuary",
         "bgImage": ["https://api.planb-mc.com/webImages/quests/shulker2.png"],
         "desc": "Place holder for quest description",

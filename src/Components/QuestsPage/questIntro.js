@@ -28,7 +28,7 @@ const QuestIntro = ({ a, pageData  }) => {
                     <p class="card-text">{quest.desc.slice(0,100)}...</p>
                 </div>
                 <div class="card-footer qiFooter">
-                    <Link to={'/quests/' + a} className="btn btn-outline-dark d-block">Download</Link>
+                    <Link to={'/quests/' + a} className="btn btn-outline-dark d-block">View Quest</Link>
                 </div>
             </div>
         </div> 

@@ -46,9 +46,7 @@ class Strike extends Component {
 
                     <div className="col-md-6">
                         <div className='card text-center my-3 p-2 bg-whiteTrans'>
-                            <div className="photo"> 
-                                <img alt="Jumps" className="img-fluid" src={"https://gooperhermetic.com/wp-content/uploads/2017/05/pojo-placeholder-4-1024x768.png"}/>
-                            </div>
+                            
                             <div className="px-3 pt-3">
                                 <h2 className="memberTitle">Jumps</h2>
                                 <p className="text-dark">{this.countJump(jump)}</p>
@@ -58,9 +56,7 @@ class Strike extends Component {
 
                     <div className="col-md-6">
                         <div className='card text-center my-3 p-2 bg-whiteTrans'>
-                            <div className="photo"> 
-                                <img alt="Crouches" className="img-fluid" src={"https://gooperhermetic.com/wp-content/uploads/2017/05/pojo-placeholder-4-1024x768.png"}/>
-                            </div>
+                            
                             <div className="px-3 pt-3">
                                 <h2 className="memberTitle">Crouches</h2>
                                 <p className="text-dark">{this.countCrouch(crouch)}</p>

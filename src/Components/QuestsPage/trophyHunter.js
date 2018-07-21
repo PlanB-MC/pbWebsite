@@ -145,7 +145,6 @@ class TrophyHunter extends Component {
         let lKeys = this.sortPlayers(leader)
         return (
             lKeys.map((item, i) => {
-                console.log("==ITEM==", item[0])
                 let uuid = this.getUuid(this.state.member, item[0])
                 return(
                     <div className="col-md-4">
@@ -223,8 +222,6 @@ class TrophyHunter extends Component {
 
     render() {
         const bKeys = Object.keys(this.state.blocks)
-        console.log("bKeys", bKeys)
-        console.log("blocks", this.state.blocks)
         this.sortMe(bKeys, this.state.blocks)
       return (
 

@@ -6,6 +6,7 @@ import pageData from '../Configs/questData.json'
 import TrophyHunter from '../Components/QuestsPage/trophyHunter';
 import Strike from '../Components/QuestsPage/strike'
 import QuestIntro from '../Components/QuestsPage/questIntro';
+import Cure from '../Components/QuestsPage/cure';
 
 let questData = [];
 let questName;
@@ -75,6 +76,10 @@ class Quests extends Component {
         case 'strikeapose':
             return (
                 <Strike />
+            )
+        case 'cureformadness':
+            return (
+                <Cure />
             )
         case '':
             let qKeys = Object.keys(pageData)

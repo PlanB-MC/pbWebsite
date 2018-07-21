@@ -16,14 +16,14 @@ class server extends Component {
         }
       }
    
-    box1 = (featInfo, features) => {
+    box1 = (featInfo, features, cmd) => {
         if(featInfo) {
             return (
                 <div className="card p-4">
                     <h4 className="text-center text-warning">{featInfo[0]}</h4>
                     <h5 className="text-muted text-center">{featInfo[1]}</h5>
                     <p className="card-text text-muted text-justify px-3 pt-3">{featInfo[2]}</p>
-                    {(features) ? <ul className="pl-5 pr-3 text-muted">{features.map(this.featList)}</ul> : ''}
+                    {(features) ? <ul className="pl-5 pr-3 text-muted">{features.map(this.featList)}</ul> : <h5 className="text-center"><span className="badge badge-secondary p-2">{cmd}</span></h5>}
                 </div>
             )
         }
@@ -45,11 +45,13 @@ class server extends Component {
                     <h5 className="text-center"><span className="badge badge-secondary p-2">{ip}</span></h5>
                     <p className="card-text text-muted text-justify px-3 pt-3">{startInfo[3]}</p>
             
-                    <div className="text-center">
-                        <h5 className="text-center"><span className="badge badge-success mx-3 p-2 d-block">/server survival</span></h5>
-                        <h5 className="text-center"><span className="badge badge-warning mx-3 p-2 d-block">/server creative</span></h5>
-                        <h5 className="text-center"><span className="badge badge-primary mx-3 p-2 d-block">/server sky</span></h5>
-                    </div>
+                    {(ip === "modded.planb-mc.com" ? null : 
+                        <div className="text-center">
+                            <h5 className="text-center"><span className="badge badge-success mx-3 p-2 d-block">/server survival</span></h5>
+                            <h5 className="text-center"><span className="badge badge-warning mx-3 p-2 d-block">/server creative</span></h5>
+                            <h5 className="text-center"><span className="badge badge-primary mx-3 p-2 d-block">/server sky</span></h5>
+                        </div>
+                    )}
                 </div>  
             )
         }
@@ -176,7 +178,7 @@ class server extends Component {
                         bgImage={this.whatImage(info.bgImage)} 
                         title={info.name} sTitle={info.subtitle} 
                         desc={info.desc} 
-                        box1={this.box1(info.featInfo, info.features)} 
+                        box1={this.box1(info.featInfo, info.features, info.discordCmd)} 
                         box2={this.box2(info.startInfo, info.ip)} 
                         dwnld={this.hasDownloads(info.seasons)}
                         useful={this.usefulCommands(info.commands)}

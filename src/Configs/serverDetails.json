@@ -77,7 +77,7 @@
     "modded": {
         "status": ["Offline!", "We are not currently hosting a modpack at this stage. Ask on Discord for furture modpacks."],
         "name": "Modded",
-        "subtitle": "Aquatic Season",
+        "subtitle": "Minecraft Reloaded",
         "image": "https://api.planb-mc.com/webImages/modded.png",
         "bgImage": ["https://api.planb-mc.com/webImages/modded.png"],
         "desc": "From time to time, PlanB hosts either a custom modpack or a popular favourite. If we arent currently running a modpack, ask on Discord for further details on up and coming packs. Should you have any ideas for a modpack that you think would benefit the community, suggestions are most welcome.",
@@ -85,12 +85,12 @@
         "joinCommand": "",
         "ip": "modded.planb-mc.com",
         "featInfo": [
-            "Sky-Island Features",
-            "Subtitle here",
-            "You find yourself marooned on an island in the sky with just a cow and a chest of strange items. Don't fall! Moo!"
+            "Interested In Modded?",
+            "Keep Updated",
+            "We appreciate that Modded Minecraft isnt for everyone. Whilst our main focus is on Vanilla, we do occassionally host a either a custom or popular modpack. If you would like to be kept updated and participate in votes and discussions, sent the following command into any Discord channel:"
         ],
-        "features": ["Challenges", "In-game Shop", "HeadShop", "Magic CobbleGen", "Elevators", "Builders Wand", "Large Island Plots", "Multiple-Choice Starter islands"],
-        "startInfo": ["Getting Started", "Switching Servers", "Connecting to the network and switching servers is fairly straight forward. Connect to the network using:", "If this is your first time logging in you will default to the survival server. To switch to the other servers, use the following commands:"]
+        "discordCmd": "-modded",
+        "startInfo": ["Getting Started", "Connecting", "Connecting to the modded server is fairly straight forward. Use the following IP Address in your chosen mod laucnher:", "If this is your first time playing modded and you could use some help getting started, feel free to reach out to an Admin."]
     }
 }
  

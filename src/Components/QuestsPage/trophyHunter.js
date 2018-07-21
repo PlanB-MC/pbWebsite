@@ -117,44 +117,36 @@ class TrophyHunter extends Component {
         this.setState({ selectedOption: event.target.value });
     }
 
-    getUuid = (arr, searchKey) => {
-        return arr.filter(function(obj) {
-            return Object.keys(obj).some(function(key) {
-            return obj[key].includes(searchKey);
-            })
-        });
-    }
-
     sortPlayers = (obj) => {
         // convert object into array
         let sortable=[];
         for(let key in obj)
           if(obj.hasOwnProperty(key))
-            sortable.push([key, obj[key]]); // each item is an array in format [key, value]
+            sortable.push(obj[key]); // each item is an array in format [key, value]
       
         // sort items by value
         sortable.sort(function(a, b)
         {
-          return a[1]<b[1]; // compare numbers
+          return a.found<b.found; // compare numbers
         });
-        return sortable; // array in format [ [ key1, val1 ], [ key2, val2 ], ... ]
+        return this.leaderBoard(sortable); // array in format [ [ key1, val1 ], [ key2, val2 ], ... ]
     };
         
 
-    leaderBoard = (leader) => {
-        let lKeys = this.sortPlayers(leader)
+    leaderBoard = (sorted) => {
         return (
-            lKeys.map((item, i) => {
-                let uuid = this.getUuid(this.state.member, item[0])
+            sorted.map((item, i) => {
+                let user = item
+                console.log(user)
                 return(
-                    <div className="col-md-4">
+                    <div className="col-md-4" key={i}>
                         <div className='card text-center my-3 p-3 bg-whiteTrans'>
                             <div className="photo"> 
-                                <img alt={item} className="img-fluid" src={"https://visage.surgeplay.com/head/250/" + uuid[0].uuid}/>
+                                <img alt={user.name} className="img-fluid" src={"https://visage.surgeplay.com/head/250/" + user.uuid}/>
                             </div>
                             <div>
-                                <h2 className="memberTitle">{item[0]}</h2>
-                                <p className="text-dark">Items Found: {item[1]}</p>
+                                <h2 className="memberTitle">{user.name}</h2>
+                                <p className="text-dark">Items Found: {user.found}</p>
                             </div>
                         </div>
                     </div>
@@ -175,7 +167,7 @@ class TrophyHunter extends Component {
                 return (    
                     <div className="px-4">
                         <div className="row">
-                            {this.leaderBoard(this.state.leaders)}
+                            {this.sortPlayers(this.state.leaders)}
                         </div>
                     </div>
                 )

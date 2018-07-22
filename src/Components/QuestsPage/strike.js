@@ -32,8 +32,6 @@ class Strike extends Component {
     countCrouch = (cData) => {
         const cSum = cData.reduce((a, b) => a + b, 0)
         const meters = cSum / 100
-
-        const cFormatted = cSum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "m"
         return(
             meters
         )

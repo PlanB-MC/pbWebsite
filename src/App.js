@@ -10,6 +10,7 @@ import Member from './Pages/members';
 import Quests from './Pages/questPage';
 import Tutorial from './Pages/tutorialPage';
 import Maps from './Pages/mapPage';
+import Footer from './Components/Global/footer';
 
 
 const App = () => (
@@ -25,6 +26,7 @@ const App = () => (
         <Route path="/tutorials" component={Tutorial} />
         <Route path="/maps" component={Maps} />
         </Switch>
+        <Footer />
       </ScrollToTop>
   </Router>
 );

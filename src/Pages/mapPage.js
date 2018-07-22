@@ -14,7 +14,7 @@ const listMaps = () => {
             </div>
             <div className="px-3 pt-1">
                 <h2 className="memberTitle">{data[a].title}</h2>
-                <a href={"https://map.planb-mc.com/" + a} className="btn btn-outline-dark d-block my-4" target="_blank">{data[a].textLink}</a>
+                <a href={"https://map.planb-mc.com/" + a} className="btn btn-outline-dark d-block my-4" >{data[a].textLink}</a>
             </div>
           </div>
       </div>

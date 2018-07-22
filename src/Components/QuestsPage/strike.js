@@ -22,7 +22,7 @@ class Strike extends Component {
     }
 
     countJump = (jData) => {
-        const jSum = jData.reduce((a, b) => a + b, 0).toString()
+        const jSum = jData.reduce((a, b) => a + b, 0)
         const jFormatted = jSum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
         return(
             jFormatted
@@ -30,10 +30,12 @@ class Strike extends Component {
     }
 
     countCrouch = (cData) => {
-        const cSum = cData.reduce((a, b) => a + b, 0).toString()
+        const cSum = cData.reduce((a, b) => a + b, 0)
+        const meters = cSum / 100
+
         const cFormatted = cSum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "m"
         return(
-            cFormatted
+            meters
         )
     }
     
@@ -58,8 +60,8 @@ class Strike extends Component {
                         <div className='card text-center my-3 p-2 bg-whiteTrans'>
                             
                             <div className="px-3 pt-3">
-                                <h2 className="memberTitle">Crouches</h2>
-                                <p className="text-dark">{this.countCrouch(crouch)}</p>
+                                <h2 className="memberTitle">Crouched</h2>
+                                <p className="text-dark">{this.countCrouch(crouch)}m</p>
                             </div>
                         </div>
                     </div>

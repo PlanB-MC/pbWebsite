@@ -7,6 +7,7 @@ import TrophyHunter from '../Components/QuestsPage/trophyHunter';
 import Strike from '../Components/QuestsPage/strike'
 import QuestIntro from '../Components/QuestsPage/questIntro';
 import Cure from '../Components/QuestsPage/cure';
+import Mime from '../Components/QuestsPage/mime';
 
 let questData = [];
 let questName;
@@ -80,6 +81,10 @@ class Quests extends Component {
         case 'cureformadness':
             return (
                 <Cure />
+            )
+        case 'mimeartist':
+            return (
+                <Mime />
             )
         case '':
             let qKeys = Object.keys(pageData)

@@ -137,7 +137,6 @@ class TrophyHunter extends Component {
         return (
             sorted.map((item, i) => {
                 let user = item
-                console.log(user)
                 return(
                     <div className="col-md-4" key={i}>
                         <div className='card text-center my-3 p-3 bg-whiteTrans'>

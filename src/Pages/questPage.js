@@ -8,6 +8,7 @@ import Strike from '../Components/QuestsPage/strike'
 import QuestIntro from '../Components/QuestsPage/questIntro';
 import Cure from '../Components/QuestsPage/cure';
 import Mime from '../Components/QuestsPage/mime';
+import Shulker from '../Components/QuestsPage/shulker';
 
 let questData = [];
 let questName;
@@ -85,6 +86,10 @@ class Quests extends Component {
         case 'mimeartist':
             return (
                 <Mime />
+            )
+        case 'shulkersanctuary':
+            return (
+                <Shulker />
             )
         case '':
             let qKeys = Object.keys(pageData)

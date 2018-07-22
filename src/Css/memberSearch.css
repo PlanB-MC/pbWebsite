@@ -1,8 +1,5 @@
 .searchbar {
     border-radius: 8px;
-    -webkit-box-shadow: 5px 5px 15px 3px rgba(0,0,0,0.61);
-    -moz-box-shadow: 5px 5px 15px 3px rgba(0,0,0,0.61);
-    box-shadow: 5px 5px 15px 3px rgba(0,0,0,0.61);
 }
 input[type="search"] {
     background: #525252;

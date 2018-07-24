@@ -5,7 +5,7 @@
         "desc": "This season the quality of life and game changing mechanics will have to be earned by the community. One player sleeping won’t be unlocked until the 10th night has passed. The headshop won’t be unlocked until the server as a collective has obtained every item in game and once the server has slain a whopping 1000 shulkers it will be awarded with a shulker spawner in the end dimension. And more challenges await this season with exciting rewards!"
     },
     "riseandshine": {
-        "status": ["warning", "fa fa-spinner fa-spin", "In-Progress", "This quest is awaiting completion!"],
+        "status": ["success", "fas fa-check", "Completed", "This quest has been completed!"],
         "title": "Rise & Shine",
         "bgImage": ["https://api.planb-mc.com/webImages/quests/rise.png"],
         "desc": "To learn the secrets of one player sleeping, the community must use its wit and skills to battle the way through the first 10 nights.",

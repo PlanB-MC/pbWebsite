@@ -56,33 +56,8 @@ class Mime extends Component {
 
     
     render() {
-        console.log("test", this.state.test)
         return (
             <div className="container">
-                <div className="row px-4">
-
-                    <div className="col-md-6">
-                        <div className='card text-center my-3 p-2 bg-whiteTrans'>
-                            
-                            <div className="px-3 pt-3">
-                                <h2 className="memberTitle">Placed</h2>
-                                <p className="text-dark">{this.state.placed}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-md-6">
-                        <div className='card text-center my-3 p-2 bg-whiteTrans'>
-                            
-                            <div className="px-3 pt-3">
-                                <h2 className="memberTitle">Remaining</h2>
-                                <p className="text-dark">{(100000 - this.state.placed).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
-                            </div>
-                        </div>
-                    </div>
-                    {this.sortPlayers(this.state.leaders)}
-                </div>  
-                
             </div>
         )
       

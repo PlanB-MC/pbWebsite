@@ -26,7 +26,7 @@ class Cure extends Component {
     }
     
     render() {
-        const horse = this.state.horse
+        const horse = this.countDeadHorses(this.state.horse)
         return (
             <div className="container">
                 <div className="row px-4">
@@ -36,7 +36,7 @@ class Cure extends Component {
                             
                             <div className="px-3 pt-3">
                                 <h2 className="memberTitle">Horses Killed</h2>
-                                <p className="text-dark">{this.countDeadHorses(horse)}</p>
+                                <p className="text-dark">{horse}</p>
                             </div>
                         </div>
                     </div>

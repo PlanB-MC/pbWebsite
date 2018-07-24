@@ -40,7 +40,7 @@
         "status": ["warning", "fa fa-spinner fa-spin", "In-Progress", "This quest is awaiting completion!"],
         "title": "Mime Artist",
         "bgImage": ["https://api.planb-mc.com/webImages//quests/mime.png"],
-        "desc": "Place holder for quest description",
+        "desc": "MimeB: ¯|_(ツ)_/¯",
         "aim": "Place 100k Glass Blocks",
         "reward": "Barrier Blocks"
     },

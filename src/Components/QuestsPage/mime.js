@@ -7,13 +7,13 @@ class Mime extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            "place": []
+            "placed": []
         }
     }
      
     componentDidMount() {
         apiCall("https://api.planb-mc.com/pbConfig.json").then(
-            response => this.setState({ test: response, placed: response.pbExtraOutput.glassPlaced.amount, leaders: response.pbExtraOutput.glassPlaced.players})
+            response => this.setState({ test: response, placed: response.pbBarrier.amount, leaders: response.pbBarrier.players})
         )
     }
 
@@ -27,7 +27,6 @@ class Mime extends Component {
         // sort items by value
         sortable.sort(function(a, b)
         {
-            console.log(a)
           return b.score - a.score; // compare numbers
         });
         return this.leaderBoard(sortable); // array in format [ [ key1, val1 ], [ key2, val2 ], ... ]
@@ -57,7 +56,7 @@ class Mime extends Component {
 
     
     render() {
-        console.log(this.state.leaders)
+        console.log("test", this.state.test)
         return (
             <div className="container">
                 <div className="row px-4">

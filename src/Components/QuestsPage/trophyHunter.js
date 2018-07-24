@@ -31,6 +31,7 @@ class TrophyHunter extends Component {
     }
     
     bCard = (bKeys) => {
+        console.log(bKeys)
         let sOption = (items) => {
             switch (this.state.selectedOption) {
                 case "Found":
@@ -50,7 +51,7 @@ class TrophyHunter extends Component {
                     { 
                         bKeys.map((item, i) => {
                             const items = this.state.blocks[item]
-                            
+                            // console.log(items)
                             if(sOption(items) && items.name.toLowerCase().includes(this.state.searchfield.toLowerCase())){
                                 return (
                                     <div key={i} className="col-md-4 my-2">
@@ -61,6 +62,7 @@ class TrophyHunter extends Component {
                                             
                                             <div className="mt-4 mb-5">
                                                 <h2 className="itemTitle my-4">{items.name}</h2>
+                                                <p>{bKeys[i]}</p>
                                             </div>
                                             {this.isFound(items.found, items.player)}
                                         </div>

@@ -31,7 +31,7 @@ class Strike extends Component {
 
     countCrouch = (cData) => {
         const cSum = cData.reduce((a, b) => a + b, 0)
-        const meters = cSum / 10000
+        const meters = cSum / 100000
         return(
             meters
         )
@@ -39,7 +39,7 @@ class Strike extends Component {
     
     render() {
         const jump = this.state.jump
-        const crouch = this.state.crouch
+        const crouch = this.countCrouch(this.state.crouch)
         return (
             <div className="container">
                 <div className="row px-4">
@@ -59,7 +59,7 @@ class Strike extends Component {
                             
                             <div className="px-3 pt-3">
                                 <h2 className="memberTitle">Crouched</h2>
-                                <p className="text-dark">{this.countCrouch(crouch)} Km</p>
+                                <p className="text-dark">{Math.round(crouch * 100) / 100} Km</p>
                             </div>
                         </div>
                     </div>

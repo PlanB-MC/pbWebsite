@@ -27,7 +27,8 @@ class Mime extends Component {
         // sort items by value
         sortable.sort(function(a, b)
         {
-          return a.found<b.found; // compare numbers
+            console.log(a)
+          return b.score - a.score; // compare numbers
         });
         return this.leaderBoard(sortable); // array in format [ [ key1, val1 ], [ key2, val2 ], ... ]
     };

@@ -62,7 +62,6 @@ class TrophyHunter extends Component {
                                             
                                             <div className="mt-4 mb-5">
                                                 <h2 className="itemTitle my-4">{items.name}</h2>
-                                                <p>{bKeys[i]}</p>
                                             </div>
                                             {this.isFound(items.found, items.player)}
                                         </div>

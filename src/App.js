@@ -12,7 +12,7 @@ import Tutorial from './Pages/tutorialPage';
 import Maps from './Pages/mapPage';
 import Footer from './Components/Global/footer';
 
-
+console.log(process.env.TEST_TOKEN)
 const App = () => (
   <Router> 
       <ScrollToTop>  

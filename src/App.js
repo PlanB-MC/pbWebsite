@@ -11,6 +11,7 @@ import Quests from './Pages/questPage';
 import Tutorial from './Pages/tutorialPage';
 import Maps from './Pages/mapPage';
 import Footer from './Components/Global/footer';
+import application from './Pages/application'
 
 console.log(process.env.REACT_APP_TEST_TOKEN)
 const App = () => (
@@ -25,6 +26,7 @@ const App = () => (
         <Route path="/server" component={server} />
         <Route path="/tutorials" component={Tutorial} />
         <Route path="/maps" component={Maps} />
+        <Route path="/apply" component={application} />
         </Switch>
         <Footer />
       </ScrollToTop>

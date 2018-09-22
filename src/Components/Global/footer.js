@@ -30,6 +30,7 @@ const Footer = () => {
                                 <li><a href="/members" title=""><i className="fa fa-angle-double-right"></i> Members</a></li>
                                 <li><a href="/about" title=""><i className="fa fa-angle-double-right"></i> Join Us</a></li>
                                 <li><a href="/donations" title=""><i className="fa fa-angle-double-right"></i> Donations</a></li>
+                                <li><a href="/apply" title=""><i className="fa fa-angle-double-right"></i> Apply</a></li>
                             </ul>
                         </div>
                     </div>

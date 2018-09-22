@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import General from '../Layouts/general'
 import axios from 'axios';
+import '../Css/apply.css'
 
 
 class About extends Component {
@@ -16,9 +17,38 @@ class About extends Component {
   }
 
    onChange = (e) => {
-       console.log(e.target.id, e.target.value)
+       console.log(e.target.id, e.target.value, e.target.type)
+    // If other option is chosen ask for more info
+    if(e.target.type === "select-one"){
+        this.userInput(e.target.id, e.target.value)
+    }else{
         this.setState({ [e.target.id]: e.target.value });
+    }
    }
+
+   userInput = (id, value) => {
+       let msg;
+       switch (value) {
+           case "friend":
+                msg = "Please enter your friends IGN"
+               break;
+       
+           default:
+                msg = "Please enter your answer :]"
+               break;
+       }
+
+       const uInput = prompt(msg, "");
+        const eleID = document.getElementById(id);
+        const option = document.createElement("option");
+        option.text = `${value} - ${uInput}`;
+        eleID.add(option);
+        document.getElementById(id).value=`${value} - ${uInput}`
+        
+        this.setState({ [id]: uInput })
+
+   }
+   
    sendHook = () => {
     const hookID = "https://discordapp.com/api/webhooks/492301887605964811/sLT1VH2weMUgSvxNU9idT46yjl4GCtJBi07egj9gmtS-jOWVJqbKOKhj90vYC4t2L5a3"
     const { name, ign, age, timezone, gender } = this.state;
@@ -75,19 +105,17 @@ class About extends Component {
       
     return (
         <div>
-            <General title={"Application"} sTitle={"Join Today"} desc={"abc"}  
-            box1={
-                <div class="container">
-          {this.state.name}{this.state.ign}{this.state.age}{this.state.timezone}{this.state.gender}
-                <form>
+            <General title={"Application"} sTitle={"Join Today"} desc={"abc"} bgImage={"https:///api.planb-mc.com/webImages/apply1.png"} 
+            misc={
+                <div class="container applyForm">
+                    <div class="card bg-whiteTrans applybord">
+                    <img id="avatar" class="avatar bg-whiteTrans" src={`https://minotar.net/helm/` + this.state.ign} alt="avat"/>
+                        <div class="card-body afterav">
           
-                    <div class="card person-card">
-                        <div class="card-body">
-          
-                            <img id="img_sex" class="person-img" src={`https://minotar.net/helm/` + this.state.ign} alt="avat"/>
+                          
                             <h2 id="who_message" class="card-title">Who are you ?</h2>
           
-                            <div class="row">
+                            <div class="row ">
                                 <div class="form-group col-md-4">
                                     <input id="name" type="text" class="form-control" placeholder="Name" onChange={this.onChange}/>
                                     <div id="name_feedback" class="invalid-feedback">
@@ -108,6 +136,7 @@ class About extends Component {
                                         <option value="22-25">22 - 25</option>
                                         <option value="26-38">26 - 30</option>
                                         <option value="30+">30+</option>
+                                        <option value="other">Other</option>
                                     </select>
                                 </div>
                             </div>
@@ -120,17 +149,22 @@ class About extends Component {
                                     </div>
                                 </div>
                                 <div class="form-group col-md-4">
-                                    <input id="refered" type="text" class="form-control" placeholder="How did you hear about us?"/>
-                                    <div id="refered_feedback" class="invalid-feedback">
-        
-                                    </div>
+                                    
+                                   <select id="refered" class="form-control" onChange={this.onChange}>
+                                        <option value="" disabled selected>How did you hear about us?</option>
+                                        <option value="Reddit">Reddit</option>
+                                        <option value="MCF">Minecraft Forum</option>
+                                        <option value="friend">Friend</option>
+                                        <option value="other">Other</option>
+                                    </select>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <select id="gender" class="form-control" onChange={this.onChange}>
-                                    <option value="" disabled selected>Select your gender</option>
+                                        <option value="" disabled selected>Select your gender</option>
                                         <option value="Non Binary">Non Binary</option>
                                         <option value="Female">Female</option>
                                         <option value="Male">Male</option>
+                                        <option value="other">Other</option>
                                     </select>
                                 </div>
                             </div>
@@ -145,21 +179,26 @@ class About extends Component {
                         </div>
                     </div>
         
-                    <div class="row">
+                    <div class="row my-3">
                         <div class="col-md-6">
-                            <div class="card">
+                            <div class="card bg-whiteTrans">
                                 <div class="card-body">
-                                    <h2 class="card-title text-center">You and Minecraft!</h2>
+                                    <h2 class="card-title text-center text-danger">You and Minecraft!</h2>
                                     <div class="form-group">
                                         <label for="startMC" class="col-form-label">When did you start playing MC?</label>
-                                        <input type="startMC" class="form-control" id="startMC" placeholder="1.10" required/>
-                                        <div class="startMC-feedback">
-        
-                                        </div>
+                                        <select id="startMC" class="form-control" onChange={this.onChange}>
+                                            <option value="" disabled selected>Select version</option>
+                                            <option value="1.0 - 1.7">1.0 - 1.7</option>
+                                            <option value="1.8 - 1.10">1.8 - 1.10</option>
+                                            <option value="1.11">1.11</option>
+                                            <option value="1.12">1.12</option>
+                                            <option value="1.13">1.13</option>
+                                        </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="fav" class="col-form-label">What are your favorite things to do in
                                             Minecraft?</label>
+                                            <input type="checkbox" name="vehicle" value="Car"/> I have a car
                                         <input type="text" class="form-control" id="fav" placeholder="dig big holes" required/>
                                         <div class="fav-feedback">
         
@@ -170,7 +209,7 @@ class About extends Component {
                         </div>
         
                         <div class="col-md-6">
-                            <div class="card">
+                            <div class="card bg-whiteTrans">
                                 <div class="card-body">
                                     <h2 class="card-title text-center">You and Us!</h2>
                                     <div class="form-group">
@@ -193,11 +232,11 @@ class About extends Component {
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="py-3">
                         <button onClick={this.sendHook} type="button" class="btn btn-primary btn-lg btn-block">Sign up !</button>
         
                     </div>
-                </form>
+
             </div>
             } 
             />  

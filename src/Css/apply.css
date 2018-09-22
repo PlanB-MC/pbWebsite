@@ -1,0 +1,26 @@
+.avatar {
+    position: absolute;
+    top: -5em;
+    left: 50%;
+    margin-left: -5em;
+    height: 150px;
+    width: auto;
+    padding: 5px;
+    border-radius: 50%;
+    border: 4px solid rgb(54, 54, 54);
+    background-color: rgb(184, 185, 185)
+
+}
+
+.applyForm {
+    margin-top: 70px 
+}
+
+.afterav{
+    margin: 30px 0 0 0;
+ 
+}
+.applybord {
+    border: 4px solid rgb(54, 54, 54);
+    
+}

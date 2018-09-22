@@ -15,22 +15,14 @@ import application from './Pages/application'
 
 console.log(process.env.REACT_APP_TEST_TOKEN)
 const App = () => (
-  <Router> 
-      <ScrollToTop>  
-        <Header />
-        <Switch>
-        <Route exact path="/" component={LandingPage} />
-        <Route path="/about" component={About} />
-        <Route path="/members" component={Member} />
-        <Route path="/quests" component={Quests} />
-        <Route path="/server" component={server} />
-        <Route path="/tutorials" component={Tutorial} />
-        <Route path="/maps" component={Maps} />
-        <Route path="/apply" component={application} />
-        </Switch>
-        <Footer />
-      </ScrollToTop>
-  </Router>
+<Router>
+  <Switch>
+  <Route exact path="/" component={LandingPage}/>
+  <Route path="/about" component={About}/>
+  <Route path="/apply" component={application}/>
+  
+</Switch>
+</Router>
 );
 
 

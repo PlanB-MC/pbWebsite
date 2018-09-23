@@ -18,86 +18,92 @@ class About extends Component {
 
    onChange = (e) => {
        console.log(e.target.id, e.target.value, e.target.type)
-    // If other option is chosen ask for more info
-    switch (e.target.value) {
-        case "friend":{
-            this.userInput(e.target.id, e.target.value, "Please enter your friends IGN")
-            break;
-        }
-        case "other":{
-            this.userInput(e.target.id, e.target.value, "Please enter your answer")
-            break;
-        }
-        default:
-            this.setState({ [e.target.id]: e.target.value });
-            break;
-    }
+       // If other option is chosen ask for more info
+       switch (e.target.value) {
+           case "friend": {
+                   this.userInput(e.target.id, e.target.value, "Please enter your friends IGN")
+                   break;
+               }
+           case "other": {
+                   this.userInput(e.target.id, e.target.value, "Please enter your answer")
+                   break;
+               }
+           default:
+               this.setState({
+                   [e.target.id]: e.target.value
+               });
+               break;
+       }
    }
 
    userInput = (id, value, msg) => {
-      
-
        const uInput = prompt(msg, "");
-        const eleID = document.getElementById(id);
-        const option = document.createElement("option");
-        option.text = `${value} - ${uInput}`;
-        eleID.add(option);
-        document.getElementById(id).value=`${value} - ${uInput}`
-        
-        this.setState({ [id]: uInput })
-
+       const eleID = document.getElementById(id);
+       const option = document.createElement("option");
+       option.text = `${value} - ${uInput}`;
+       eleID.add(option);
+       document.getElementById(id).value = `${value} - ${uInput}`
+       this.setState({
+           [id]: uInput
+       })
    }
    
    sendHook = () => {
-    const hookID = "https://discordapp.com/api/webhooks/492301887605964811/sLT1VH2weMUgSvxNU9idT46yjl4GCtJBi07egj9gmtS-jOWVJqbKOKhj90vYC4t2L5a3"
-    const { name, ign, age, timezone, gender } = this.state;
-    axios.post(hookID, {  
-        
-        "embeds": [{
-            "title": `New Application from: **${ign}**`,
-            "description": "about",
-            "color": 1127128,
-            "thumbnail": {
-                "url": `https://minotar.net/armor/bust/${ign}/100.png`
-            },
-            "fields": [{
-                    "name": "Prefered Name",
-                    "value": name,
-                    "inline": true
-                },
-                {
-                    "name": "Age",
-                    "value": age,
-                    "inline": true
-                },
-                {
-                    "name": "Timezone",
-                    "value": timezone,
-                    "inline": true
-                },
-                {
-                    "name": "Gender",
-                    "value": gender,
-                    "inline": true
-                },
-                {
-                    "name": "Refered By:",
-                    "value": "refered",
-                    "inline": true
-                }
-            ]
-        }]
-    
-         })
-        .then((result) => {
-            if(result.status === 204) alert("Awesome, your app was sent")
-            console.log("RESULT", result.status)
-          })
-          .catch((err) => {
-            alert("An error was detected, please ensure all fields are complete")
-            console.log("err", err)
-          });
-   
+       const hookID = "https://discordapp.com/api/webhooks/492301887605964811/sLT1VH2weMUgSvxNU9idT46yjl4GCtJBi07egj9gmtS-jOWVJqbKOKhj90vYC4t2L5a3"
+       const {
+           name,
+           ign,
+           age,
+           timezone,
+           gender
+       } = this.state;
+       axios.post(hookID, {
+
+               "embeds": [{
+                   "title": `New Application from: **${ign}**`,
+                   "description": "about",
+                   "color": 1127128,
+                   "thumbnail": {
+                       "url": `https://minotar.net/armor/bust/${ign}/100.png`
+                   },
+                   "fields": [{
+                           "name": "Prefered Name",
+                           "value": name,
+                           "inline": true
+                       },
+                       {
+                           "name": "Age",
+                           "value": age,
+                           "inline": true
+                       },
+                       {
+                           "name": "Timezone",
+                           "value": timezone,
+                           "inline": true
+                       },
+                       {
+                           "name": "Gender",
+                           "value": gender,
+                           "inline": true
+                       },
+                       {
+                           "name": "Refered By:",
+                           "value": "refered",
+                           "inline": true
+                       }
+                   ]
+               }]
+
+           })
+           .then((result) => {
+               if (result.status === 204) alert("Awesome, your app was sent")
+               console.log("RESULT", result.status)
+           })
+           .catch((err) => {
+               alert("An error was detected, please ensure all fields are complete")
+               console.log("err", err)
+           });
+
    }
     
   render() {

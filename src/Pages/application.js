@@ -19,24 +19,23 @@ class About extends Component {
    onChange = (e) => {
        console.log(e.target.id, e.target.value, e.target.type)
     // If other option is chosen ask for more info
-    if(e.target.type === "select-one"){
-        this.userInput(e.target.id, e.target.value)
-    }else{
-        this.setState({ [e.target.id]: e.target.value });
+    switch (e.target.value) {
+        case "friend":{
+            this.userInput(e.target.id, e.target.value, "Please enter your friends IGN")
+            break;
+        }
+        case "other":{
+            this.userInput(e.target.id, e.target.value, "Please enter your answer")
+            break;
+        }
+        default:
+            this.setState({ [e.target.id]: e.target.value });
+            break;
     }
    }
 
-   userInput = (id, value) => {
-       let msg;
-       switch (value) {
-           case "friend":
-                msg = "Please enter your friends IGN"
-               break;
-       
-           default:
-                msg = "Please enter your answer :]"
-               break;
-       }
+   userInput = (id, value, msg) => {
+      
 
        const uInput = prompt(msg, "");
         const eleID = document.getElementById(id);

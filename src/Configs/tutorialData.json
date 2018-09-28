@@ -3,7 +3,7 @@
         "cobblegen": {
             "name": "CobbleGen",
             "sub": "Tutorial",
-            "image": "http://planb-mc.com/images/acidtut/cobgen.jpg",
+            "image": "http://api.planb-mc.com/webImages/tuts/islands/cobgen.jpg",
             "desc": "This guide will teach you how to make a cobble stone generator that you can use when playing skyblock.",
             "youtube": "https://www.youtube.com/embed/YUhkJZQ5nps",
             "steps": [
@@ -22,7 +22,7 @@
         "elevators": {
             "name": "Elevators",
             "sub": "Tutorial",
-            "image": "http://planb-mc.com/images/acidtut/cobgen.jpg",
+            "image": "http://api.planb-mc.com/webImages/tuts/comingsoon.png",
             "desc": "Simple Elevators provides very simple and easy to use elevators. Using Space to go one floor up, and Shift to go one floor down. It's that Simple!",
             "steps": [
                 ["http://planb-mc.com/images/acidtut/cobgen.jpg", "Block Combos", "You can use any combination of the blocks above"],

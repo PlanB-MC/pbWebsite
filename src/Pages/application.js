@@ -69,7 +69,8 @@ class About extends Component {
            startMC,
            drew,
            want,
-           fav
+           fav,
+           discord
        } = this.state;
        axios.post(hookID, {
 
@@ -126,8 +127,8 @@ class About extends Component {
                            "inline": true
                        },
                        {
-                        "name": "Missing {}:",
-                        "value": "@Valicious15 Guess whats still missing :P",
+                        "name": "Discord:",
+                        "value": discord,
                         "inline": false
                     }
                    ]
@@ -219,6 +220,12 @@ class About extends Component {
                         <div class="row">
                             <div class="form-group col-md-12">
                                 <textarea id="animal" type="textarea" class="form-control" placeholder="What is you favourite animal?" onChange={this.onChange}></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <textarea id="discordID" type="textarea" class="form-control" placeholder="What is your Discord handle? (Including the #, eg. Lucas#1692" onChange={this.onChange}></textarea>
                             </div>
                         </div>
             

@@ -19,7 +19,8 @@ class About extends Component {
         startMC: "",
         drew: "",
         want: "",
-        fav: ""
+        fav: "",
+        discord: ""
      }
   }
 
@@ -225,7 +226,7 @@ class About extends Component {
 
                         <div class="row">
                             <div class="form-group col-md-12">
-                                <textarea id="discordID" type="textarea" class="form-control" placeholder="What is your Discord handle? (Including the #, eg. Lucas#1692" onChange={this.onChange}></textarea>
+                                <textarea id="discord" type="textarea" class="form-control" placeholder="What is your Discord handle? (Including the #, eg. Lucas#1692" onChange={this.onChange}></textarea>
                             </div>
                         </div>
             

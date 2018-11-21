@@ -118,7 +118,7 @@ class About extends Component {
                            "inline": true
                        },
                        {
-                           "name": "What they qant from the community:",
+                           "name": "What they want from the community:",
                            "value": want,
                            "inline": true
                        },
@@ -128,7 +128,7 @@ class About extends Component {
                            "inline": true
                        },
                        {
-                        "name": "Discord:",
+                        "name": "Method of Contact:",
                         "value": discord,
                         "inline": false
                     }
@@ -226,7 +226,7 @@ class About extends Component {
 
                         <div class="row">
                             <div class="form-group col-md-12">
-                                <textarea id="discord" type="textarea" class="form-control" placeholder="What is your Discord handle? (Including the #, eg. Lucas#1692" onChange={this.onChange}></textarea>
+                                <textarea id="discord" type="textarea" class="form-control" placeholder="How can we contact you regarding your application. Enter reddit/mcf username or full discord id/email" onChange={this.onChange}></textarea>
                             </div>
                         </div>
             

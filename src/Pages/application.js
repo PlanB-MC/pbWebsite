@@ -151,14 +151,16 @@ class About extends Component {
       
     return (
         <div>
-            <General title={"Application"} sTitle={"Join Today"} desc={"Want to sign up to our private white listed survival server?"} bgImage={"https:///api.planb-mc.com/webImages/apply1.png"} 
+            <General title={"Application"} sTitle={"Join Today"} desc={
+                "To sign up to our whitelisted survival server, please fill out the form below. Ensuring that you have completed each field and to a high level of detail. We put a lot of time and effort into making PlanB, minimal application will likely be rejected."
+            } bgImage={"https:///api.planb-mc.com/webImages/apply1.png"} 
             misc={
             <div class="container applyForm">
                 <div class="card bg-whiteTrans applybord">
                     <img id="avatar" class="avatar bg-whiteTrans" src={`https://minotar.net/helm/` + this.state.ign} alt="avat" />
                     <div class="card-body afterav">
             
-                        <h2 id="who_message" class="card-title">Who are you ?</h2>
+                        <h2 id="who_message" class="card-title text-center">Who are you ?</h2>
             
                         <div class="row ">
             

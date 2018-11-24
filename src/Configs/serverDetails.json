@@ -23,30 +23,6 @@
             "s5": ["Aquatic","", "https://api.planb-mc.com/webImages/serverPage/s5.png", "Current Season for 1.13", "1.13"]
     }
     },
-    "Planb%2B": {
-        "name": "PlanB+",
-        "subtitle": "The New Frontier",
-        "image": "https://api.planb-mc.com/webImages/survival.png",
-        "bgImage": ["https://api.planb-mc.com/webImages/swim1.png", "https://api.planb-mc.com/webImages/swim2.png", "https://api.planb-mc.com/webImages/swim3.png", "https://api.planb-mc.com/webImages/swim4.png", "https://api.planb-mc.com/webImages/swim5.png", "https://api.planb-mc.com/webImages/swim6.png", "https://api.planb-mc.com/webImages/swim7.png"],
-        "desc": "Welcome to survival. You appear in a world filled with danger at every turn, and all that is expected of you is to survive and make a living for yourself. You are not invincible so watch your step. During the day everything is peaceful, but when darkness envelops everything that’s when the monsters come out to play.",
-        "infoLink": "/server/survival",
-        "joinCommand": "/server survival",
-        "ip": "play.planb-mc.com",
-        "featInfo": [
-            "Plugins & Functions",
-            "Enhancing and Securing Vanilla",
-            "Each season we carefully select plugins and functions, to keep your builds safe and bring a little variety to survival"
-        ],
-        "features": ["Server Goals", "Dynmap", "Vanilla Web Stats", "9000+ Head Shop", "Anti Creeper & Enderman Grief", "1 Player Sleeping", "Grief Protection"],
-        "startInfo": ["Getting Started", "Switching Servers", "Connecting to the network and switching servers is fairly straight forward. Connect to the network using:", "If this is your first time logging in you will default to the survival server. To switch to the other servers, use the following commands:"],
-        "seasons": {
-            "s1": ["Alpha", "https://downloads.planb-mc.com/survival-seasons/season1.zip", "https://api.planb-mc.com/webImages/serverPage/s1.png", "Season 1 was based in the desert, featuring a quaint spawn village and a colosseum.", "1.10"],
-            "s2": ["Exploration", "https://downloads.planb-mc.com/survival-seasons/season2.zip", "https://api.planb-mc.com/webImages/serverPage/s2.png", "Season 2 utilised districts for builds. Featuring the first PlanB spawn hub!", "1.11"],
-            "s3": ["Color", "https://downloads.planb-mc.com/survival-seasons/season3.zip", "https://api.planb-mc.com/webImages/serverPage/s3.png", "Season 3 featured some awesome build, including an elytra course, crater and more.", "1.12"],
-            "s4": ["Terra", "https://downloads.planb-mc.com/survival-seasons/", "https://api.planb-mc.com/webImages/serverPage/s4.png", "Season 4 was an Epic season, boasting some amazing  terrain and massive projects", "1.12.2"],
-            "s5": ["Aquatic","", "https://api.planb-mc.com/webImages/serverPage/s5.png", "Current Season for 1.13", "1.13"]
-    }
-    },
 
     "creative": {
         "name": "Creative",

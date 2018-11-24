@@ -62,7 +62,9 @@ class About extends Component {
     }
 
     sendHook = () => {
-        if (input.match(".*#[0-9]{4}")) {
+        let discordID = this.state.discord
+        console.log(discordID)
+        if (discordID.match(".*#[0-9]{4}")) {
         const hookID = "https://discordapp.com/api/webhooks/492301887605964811/sLT1VH2weMUgSvxNU9idT46yjl4GCtJBi07egj9gmtS-jOWVJqbKOKhj90vYC4t2L5a3"
         const {
             name,

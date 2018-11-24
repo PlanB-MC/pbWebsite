@@ -56,7 +56,7 @@ const Header = () => {
                             </ul>
                         </div>
 
-                        <div className="nav-item dropdown">
+                        <div className="nav-item dropdown d-none">
                             <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false"><i className="fa fa-flag"></i> Quests</a>
                             <ul className="dropdown-menu dropdown-menu-right dropdown-danger">
                                 <Link className="dropdown-item" to="/quests">Introduction</Link>

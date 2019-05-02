@@ -65,7 +65,7 @@ class About extends Component {
         let discordID = this.state.discord
         console.log(discordID)
         if (discordID.match(".*#[0-9]{4}")) {
-        const hookID = "https://discordapp.com/api/webhooks/491998297389662218/mNp3sGlM4EdcpumqLYaimrp1NGSo1gT0SQCcjQJuGxkGibdhHzC3ujGBtaS65_Ksg36c"
+        const hookID = "http://91.121.210.171:25570"
         const {
             name,
             ign,

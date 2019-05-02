@@ -102,11 +102,11 @@ class About extends Component {
                 }
             })
             .then(function (response) {
-                console.log(response);
-                alert("Thank you for your application! We will be in touch shortly.")
+                if(response.status === 200) alert("Thank you for your application! We will be in touch shortly.")
+                else alert("There was an error sending your application, please try again. Alternatively please drop us a message on Reddit/MinecraftForums")
             })
             .catch(function (error) {
-                console.log(error);
+                // console.log(error);
             });
 
         } else {

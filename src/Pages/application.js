@@ -65,7 +65,7 @@ class About extends Component {
         let discordID = this.state.discord
         console.log(discordID)
         if (discordID.match(".*#[0-9]{4}")) {
-            const hookID = "http://91.121.210.171:25570"
+            const hookID = "https://cors.io/?http://91.121.210.171:25570"
             const {
                 name,
                 ign,

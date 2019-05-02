@@ -65,94 +65,44 @@ class About extends Component {
         let discordID = this.state.discord
         console.log(discordID)
         if (discordID.match(".*#[0-9]{4}")) {
-        const hookID = "http://91.121.210.171:25570"
-        const {
-            name,
-            ign,
-            age,
-            timezone,
-            gender,
-            refered,
-            about,
-            animal,
-            startMC,
-            drew,
-            want,
-            fav,
-            discord
-        } = this.state;
-        axios.post(hookID, {
+            const hookID = "http://91.121.210.171:25570"
+            const {
+                name,
+                ign,
+                age,
+                timezone,
+                gender,
+                refered,
+                about,
+                animal,
+                startMC,
+                drew,
+                want,
+                fav,
+                discord
+            } = this.state;
 
-            "embeds": [{
-                "title": `New Application from: **${ign}**`,
-                "description": `${about} \n\nFav animal is: ${animal}`,
-                "color": 1127128,
-                "thumbnail": {
-                    "url": `https://minotar.net/armor/bust/${ign}/100.png`
-                },
-                "fields": [{
-                    "name": "Prefered Name",
-                    "value": name,
-                    "inline": true
-                },
-                {
-                    "name": "Age",
-                    "value": age,
-                    "inline": true
-                },
-                {
-                    "name": "Timezone",
-                    "value": timezone,
-                    "inline": true
-                },
-                {
-                    "name": "Gender",
-                    "value": gender,
-                    "inline": true
-                },
-                {
-                    "name": "Refered By:",
-                    "value": refered,
-                    "inline": true
-                },
-                {
-                    "name": "Started Playing:",
-                    "value": startMC,
-                    "inline": true
-                },
-                {
-                    "name": "Favorite Things:",
-                    "value": fav,
-                    "inline": true
-                },
-                {
-                    "name": "What they want from the community:",
-                    "value": want,
-                    "inline": true
-                },
-                {
-                    "name": "What drew them to our community:",
-                    "value": drew,
-                    "inline": true
-                },
-                {
-                    "name": "Method of Contact:",
-                    "value": discord,
-                    "inline": false
+            axios({
+                method: 'post',
+                url: hookID,
+                data: {
+                    "ign": ign,
+                    "about": about,
+                    "animal": animal,
+                    "name": name,
+                    "age": age,
+                    "timezone": timezone,
+                    "gender": gender,
+                    "refered": refered,
+                    "startMC": startMC,
+                    "fav": fav,
+                    "want": want,
+                    "drew": drew,
+                    "discord": discord
                 }
-                ]
-            }]
-
-        })
-            .then((result) => {
-                if (result.status === 204) alert("Awesome, your app was sent")
-                console.log("RESULT", result.status)
-            })
-            .catch((err) => {
-                alert("An error was detected, please ensure all fields are complete")
-                console.log("err", err)
             });
-        }else {
+
+        } else {
             alert("You must enter a valid Discord ID. Without this we can not contact you.\n Note: Make sure to include the has discrimintor \n example: Joe#4659 ")
         }
     }

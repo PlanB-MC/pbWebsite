@@ -100,6 +100,13 @@ class About extends Component {
                     "drew": drew,
                     "discord": discord
                 }
+            })
+            .then(function (response) {
+                console.log(response);
+                alert("Thank you for your application! We will be in touch shortly.")
+            })
+            .catch(function (error) {
+                console.log(error);
             });
 
         } else {

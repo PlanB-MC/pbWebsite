@@ -13,7 +13,7 @@ class Member extends Component {
       searchfield: '',
       selectedOption: 'All',
       searboxSetting: ["Search Players", "All", "Members", "Staff"],
-      admin: ["Mattchow", "Zerolarity", "Xantev", "BrizzleMFD", "Mystic_Nick", "lx_chix_xl"],
+      admin: ["Mattchow", "Zerolarity", "Xantev", "BrizzleMFD", "Mystic_Nick", "_chix", "Coltrain", "fantasyspices"],
       dev: ["Valicious15"]
     }
   }

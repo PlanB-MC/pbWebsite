@@ -18,6 +18,7 @@ const Card = ({ title, subTitle, image, colsize}) => {
   }
 
 const MemberCards = ({ member, rankFilter, admin, dev, sort }) => {
+    console.log(member, rankFilter, admin, dev, sort)
   
 sort(member)
 

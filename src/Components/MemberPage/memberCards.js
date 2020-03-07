@@ -18,7 +18,7 @@ const Card = ({ title, subTitle, image, colsize}) => {
   }
 
 const MemberCards = ({ member, rankFilter, admin, dev, sort }) => {
-    console.log(member, rankFilter, admin, dev, sort)
+    
   
 sort(member)
 
@@ -28,6 +28,7 @@ sort(member)
     
       {
         member.map((user, i) => {
+      console.log(user)
           let staffCheck
           if((admin.indexOf(member[i].name) > -1 )) staffCheck = "Admin"
           else if ((dev.indexOf(member[i].name) > -1 )) staffCheck = "Developer"
